@@ -10,6 +10,7 @@ Feedstock license: BSD 3-Clause
 Summary: NEST is a simulator for spiking neural network models that
 focuses on the dynamics, size and structure of neural systems rather than
 on the exact morphology of individual neurons.
+[More info](https://nest-simulator.org/)
 
 
 
@@ -63,8 +64,9 @@ Current build status
       <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
+
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 
 Current release info
 ====================
