@@ -22,7 +22,7 @@ Current build status
 <table>
     
   <tr>
-    <td>Azure</td>
+    <td>Azure / Linux</td>
     <td>
       <details>
         <summary>
@@ -64,9 +64,15 @@ Current build status
       <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
     </td>
   </tr>
+  <tr>
+    <td>ppc64le </td>
+    <td>
+      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="Windows disabled">  
+    </td>
+  </tr>
 </table>
 
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+
 
 Current release info
 ====================
