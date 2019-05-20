@@ -1,3 +1,3 @@
 mpi:
-  - nompi
-  - openmpi  # [not win]
+  - openmpi  # [limux]
+  - llvm-openmp  # [osx]

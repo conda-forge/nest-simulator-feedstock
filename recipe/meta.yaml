@@ -1,15 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.16.0" %}
 
-{% set build = 1000 %}
-
-# ensure mpi is defined (needed for conda-smithy recipe-lint)
-{% set mpi = mpi or 'nompi' %}
-{% if mpi == 'nompi' %}
-# prioritize nompi variant via build number
-{% set build = build + 100 %}
-{% endif %}
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -19,26 +10,7 @@ source:
   sha256: abfeb61719dec54da9477be035bef1d9d764f4e7663f63f6a6d9211f967e0490
 
 build:
-  number:  {{ build }}
-
-  # see: http://conda-forge.org/docs/maintainer/knowledge_base.html?highlight=openmpi
-  # add build string so packages can depend on
-  # mpi or nompi variants explicitly:
-  # `pkg * mpi_mpich_*` for mpich
-  # `pkg * mpi_*` for any mpi
-  # `pkg * nompi_*` for no mpi
-  {% if mpi != 'nompi' %}
-  {% set mpi_prefix = "mpi_" + mpi %}
-  {% else %}
-  {% set mpi_prefix = "nompi" %}
-  {% endif %}
-  string: "{{ mpi_prefix }}_h{{ PKG_HASH }}_{{ build }}"
-
-  {% if mpi != 'nompi' %}
-  run_exports:
-    - {{ name }} * {{ mpi_prefix }}_*
-  {% endif %}
-
+  number: 4
   skip: true  # [win]
   skip: true  # [py<30]
   osx_is_app: True
@@ -48,6 +20,7 @@ requirements:
     - cmake >=3.6
     - git
     - make
+    - {{ mpi }}
     - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -55,29 +28,24 @@ requirements:
     - cython
     - gsl
     - libtool
-    - llvm-openmp  # [osx]
     - matplotlib
+    - {{ mpi }}
     - ncurses
     - numpy
-    - {{ mpi }}  # [mpi != 'nompi'] [linux]
-    - pkg  # [linux]
-    - pkg * mpi_{{ mpi }}_*  # [mpi != 'nompi'] [linux]
+    - openmpi
     - python
     - readline
     - scipy
     - statsmodels
     - zlib
-
   run:
     - cython
     - gsl
     - libtool
-    - llvm-openmp  # [osx]
     - matplotlib
     - ncurses
     - {{ pin_compatible('numpy') }}
-    - {{ mpi }}  # [mpi != 'nompi'] [linux]
-    - pkg * mpi_{{ mpi }}_*  # [mpi != 'nompi'] [linux]
+    - {{ mpi }}
     - python
     - python.app  # [osx]
     - readline
