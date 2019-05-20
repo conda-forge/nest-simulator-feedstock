@@ -59,9 +59,9 @@ requirements:
     - matplotlib
     - ncurses
     - numpy
-    - {{ mpi }}  # [mpi != 'nompi']
-    - pkg
-    - pkg * mpi_{{ mpi }}_*  # [mpi != 'nompi'
+    - {{ mpi }}  # [mpi != 'nompi'] [linux]
+    - pkg  # [linux]
+    - pkg * mpi_{{ mpi }}_*  # [mpi != 'nompi'] [linux]
     - python
     - readline
     - scipy
@@ -76,8 +76,8 @@ requirements:
     - matplotlib
     - ncurses
     - {{ pin_compatible('numpy') }}
-    - {{ mpi }}  # [mpi != 'nompi']
-    - pkg * mpi_{{ mpi }}_*  # [mpi != 'nompi']
+    - {{ mpi }}  # [mpi != 'nompi'] [linux]
+    - pkg * mpi_{{ mpi }}_*  # [mpi != 'nompi'] [linux]
     - python
     - python.app  # [osx]
     - readline
