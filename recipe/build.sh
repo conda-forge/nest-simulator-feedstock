@@ -20,7 +20,7 @@ cd build
 # Linux build
 if [[ $(uname) == Linux ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-		  -Dwith-mpi=ON\
+		  -Dwith-mpi=ON \
 		  -Dwith-openmp=OFF \
 		  -Dwith-python=3 \
 		  -Dwith-gsl=${PREFIX} \
