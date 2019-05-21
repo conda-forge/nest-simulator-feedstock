@@ -17,10 +17,19 @@ fi
 mkdir build
 cd build
 
+
+mpi_arg=""
+if [[ "$mpi" != "nompi" ]]; then
+  mpi_arg="ON"
+else
+	mpi_arg="OFF"
+fi
+echo "Der MPI-Flag lautet: ${mpi_arg}"
+
 # Linux build
 if [[ $(uname) == Linux ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-		  -Dwith-mpi=ON \
+		  -Dwith-mpi=${mpi_arg} \
 		  -Dwith-openmp=OFF \
 		  -Dwith-python=3 \
 		  -Dwith-gsl=${PREFIX} \
@@ -33,8 +42,8 @@ fi
 if [[ $(uname) == Darwin ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 		  -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
-		  -Dwith-mpi=OFF \
-		  -Dwith-openmp=ON \
+		  -Dwith-mpi=${mpi_arg} \
+		  -Dwith-openmp=OFF \
 		  -Dwith-python=3 \
 		  -DPYTHON_EXECUTABLE=${PYTHON}\
 		  -DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PY_VER}.dylib \

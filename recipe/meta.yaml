@@ -1,6 +1,16 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.16.0" %}
 
+{% set build = 1000 %}
+
+# mpi must be defined for conda-smithy lint
+{% set mpi = mpi or 'nompi' %}
+
+{% if mpi == 'nompi' %}
+# prefer nompi builds via a build number offset
+{% set build = build + 100 %}
+{% endif %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -10,9 +20,23 @@ source:
   sha256: abfeb61719dec54da9477be035bef1d9d764f4e7663f63f6a6d9211f967e0490
 
 build:
-  number: 4
+  number: {{ build }}
+  {% if mpi != 'nompi' %}
+  {% set mpi_prefix = "mpi_" + mpi %}
+  {% else %}
+  {% set mpi_prefix = "nompi" %}
+  {% endif %}
+  # add build string so packages can depend on
+  # mpi or nompi variants
+  # dependencies:
+  # `pkg * mpi_mpich_*` for mpich
+  # `hdf5 * mpi_*` for any mpi
+  # `hdf5 * nompi_*` for no mpi
+  # see https://github.com/conda-forge/h5py-feedstock/blob/master/recipe/meta.yaml
+  string: "{{ mpi_prefix }}_py{{ py }}h{{ PKG_HASH }}_{{ build }}"
   skip: true  # [win]
   skip: true  # [py<30]
+  # skip: true  # [py<30]
   osx_is_app: True
 
 requirements:
@@ -20,7 +44,6 @@ requirements:
     - cmake >=3.6
     - git
     - make
-    - {{ mpi }}
     - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -29,10 +52,10 @@ requirements:
     - gsl
     - libtool
     - matplotlib
-    - {{ mpi }}
     - ncurses
     - numpy
-    - openmpi
+    - {{ mpi }}  # [mpi != 'nompi']
+    - mpi4py  # [mpi != 'nompi']
     - python
     - readline
     - scipy
@@ -43,10 +66,10 @@ requirements:
     - gsl
     - libtool
     - matplotlib
-    - {{ mpi }}
     - ncurses
     - {{ pin_compatible('numpy') }}
-    - openmpi
+    - {{ mpi }}  # [mpi != 'nompi']
+    - mpi4py  # [mpi != 'nompi']
     - python
     - python.app  # [osx]
     - readline
