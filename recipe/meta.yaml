@@ -59,7 +59,7 @@ requirements:
     - python
     - readline
     - scipy
-    - libssh2
+    - openssh
     - statsmodels
     - zlib
   run:
@@ -76,7 +76,7 @@ requirements:
     - readline
     - scipy
     - statsmodels
-    - libssh2
+    - openssh
     - zlib
 
 test:
