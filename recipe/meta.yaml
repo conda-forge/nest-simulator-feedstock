@@ -11,7 +11,8 @@ source:
 
 build:
   number: 4
-  skip: true  # [win, py<30]
+  skip: true  # [win]
+  skip: true  # [py<30]
   osx_is_app: True
 
 requirements:
@@ -42,9 +43,10 @@ requirements:
     - gsl
     - libtool
     - matplotlib
+    - {{ mpi }}
     - ncurses
     - {{ pin_compatible('numpy') }}
-    - {{ mpi }}
+    - openmpi
     - python
     - python.app  # [osx]
     - readline

@@ -10,17 +10,11 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      linux_mpinompipython3.6:
-        CONFIG: linux_mpinompipython3.6
+      linux_python3.6:
+        CONFIG: linux_python3.6
         UPLOAD_PACKAGES: True
-      linux_mpinompipython3.7:
-        CONFIG: linux_mpinompipython3.7
-        UPLOAD_PACKAGES: True
-      linux_mpiopenmpipython3.6:
-        CONFIG: linux_mpiopenmpipython3.6
-        UPLOAD_PACKAGES: True
-      linux_mpiopenmpipython3.7:
-        CONFIG: linux_mpiopenmpipython3.7
+      linux_python3.7:
+        CONFIG: linux_python3.7
         UPLOAD_PACKAGES: True
   steps:
   - script: |
