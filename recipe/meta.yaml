@@ -59,6 +59,7 @@ requirements:
     - python
     - readline
     - scipy
+    - ssh
     - statsmodels
     - zlib
   run:
@@ -75,6 +76,7 @@ requirements:
     - readline
     - scipy
     - statsmodels
+    - ssh
     - zlib
 
 test:
