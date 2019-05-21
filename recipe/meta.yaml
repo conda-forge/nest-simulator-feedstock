@@ -29,10 +29,10 @@ build:
   # add build string so packages can depend on
   # mpi or nompi variants
   # dependencies:
-  # `pkg * mpi_mpich_*` for mpich
-  # `hdf5 * mpi_*` for any mpi
-  # `hdf5 * nompi_*` for no mpi
-  # see https://github.com/conda-forge/h5py-feedstock/blob/master/recipe/meta.yaml
+  # mpi_*` for any mpi
+  # nompi_*` for no mpi
+  # examle see;
+  # https://github.com/conda-forge/h5py-feedstock/blob/master/recipe/meta.yaml
   string: "{{ mpi_prefix }}_py{{ py }}h{{ PKG_HASH }}_{{ build }}"
   skip: true  # [win]
   skip: true  # [py<30]
@@ -59,7 +59,7 @@ requirements:
     - python
     - readline
     - scipy
-    - ssh
+    - libssh2
     - statsmodels
     - zlib
   run:
@@ -76,7 +76,7 @@ requirements:
     - readline
     - scipy
     - statsmodels
-    - ssh
+    - libssh2
     - zlib
 
 test:
