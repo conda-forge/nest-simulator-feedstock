@@ -20,14 +20,8 @@ macos_min_version:
 - '10.9'
 mpi:
 - nompi
-ncurses:
-- '6.1'
-numpy:
-- '1.9'
 pin_run_as_build:
   gsl:
-    max_pin: x.x
-  ncurses:
     max_pin: x.x
   python:
     min_pin: x.x
