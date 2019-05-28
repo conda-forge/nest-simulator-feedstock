@@ -79,7 +79,6 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
     - openmp  # [linux]
-    - openmp  # [linux]
     - python
     - python.app  # [osx]
     - readline
