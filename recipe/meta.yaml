@@ -1,7 +1,7 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.16.0" %}
 
-{% set build = 1001 %}
+{% set build = 1002 %}
 
 # mpi must be defined for conda-smithy lint
 {% set mpi = mpi or 'nompi' %}
@@ -43,7 +43,9 @@ requirements:
   build:
     - cmake >=3.6
     - git
+    - llvm-openmp  # [osx]
     - make
+    - openmp  # [linux]
     - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -52,11 +54,13 @@ requirements:
     - gsl
     - {{ pin_compatible('libcblas') }}
     - libtool
+    - llvm-openmp  # [osx]
     - matplotlib
     - {{ pin_compatible('ncurses') }}
     - {{ pin_compatible('numpy') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
+    - openmp  # [linux]
     - python
     - readline
     - scipy
@@ -68,11 +72,14 @@ requirements:
     - gsl
     - {{ pin_compatible('libcblas') }}
     - libtool
+    - llvm-openmp  # [osx]
     - matplotlib
     - {{ pin_compatible('ncurses') }}
     - {{ pin_compatible('numpy') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
+    - openmp  # [linux]
+    - openmp  # [linux]
     - python
     - python.app  # [osx]
     - readline
