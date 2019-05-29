@@ -30,7 +30,7 @@ echo "Der MPI-Flag lautet: ${mpi_arg}"
 if [[ $(uname) == Linux ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 		  -Dwith-mpi=${mpi_arg} \
-		  -Dwith-openmp=ON \
+		  -Dwith-openmp=${mpi_arg} \
 		  -Dwith-python=3 \
 		  -Dwith-gsl=${PREFIX} \
 		  -DREADLINE_ROOT_DIR=${PREFIX} \
@@ -43,7 +43,7 @@ if [[ $(uname) == Darwin ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 		  -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
 		  -Dwith-mpi=${mpi_arg} \
-		  -Dwith-openmp=ON \
+		  -Dwith-openmp=${mpi_arg} \
 		  -Dwith-python=3 \
 		  -DPYTHON_EXECUTABLE=${PYTHON}\
 		  -DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PY_VER}.dylib \

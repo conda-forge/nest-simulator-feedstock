@@ -45,7 +45,7 @@ requirements:
     - git
     - llvm-openmp  # [osx]
     - make
-    - openmp  # [linux]
+    - openmp  # [linux][mpi != 'nompi']
     - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -60,7 +60,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
-    - openmp  # [linux]
+    - openmp  # [linux][mpi != 'nompi']
     - python
     - readline
     - scipy
@@ -78,7 +78,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
-    - openmp  # [linux]
+    - openmp  # [linux][linux][mpi != 'nompi']
     - python
     - python.app  # [osx]
     - readline
