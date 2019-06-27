@@ -1,7 +1,7 @@
 {% set name = "nest-simulator" %}
-{% set version = "2.16.0" %}
+{% set version = "2.18.0" %}
 
-{% set build = 1003 %}
+{% set build = 0 %}
 
 # mpi must be defined for conda-smithy lint
 {% set mpi = mpi or 'nompi' %}
@@ -17,7 +17,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: abfeb61719dec54da9477be035bef1d9d764f4e7663f63f6a6d9211f967e0490
+  sha256: 7295c936fbdd5486395b06f54f0d4d35d9a1b6ee50b7b844186ec2c92de641d1
 
 build:
   number: {{ build }}
