@@ -17,7 +17,7 @@ package:
 
 source:
   url: https://github.com/steffengraber/nest-simulator/archive/{{ version }}.tar.gz
-  sha256: 6de545d9ead0362d140ac30cdee9212d54801283664bed45c1c06368e6d0f2d4
+  sha256: 57924b4b56c1aa9f6f387c7a5e18b8a5a672c927e156251d18e82b5422bc4ebb
 
 build:
   number: {{ build }}
