@@ -1,5 +1,5 @@
-{% set name = "nest-simulator" %}
-{% set version = "2.18.0" %}
+{% set name = "nesttest" %}
+{% set version = "fixmacosjupyter" %}
 
 {% set build = 1 %}
 
@@ -16,8 +16,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7295c936fbdd5486395b06f54f0d4d35d9a1b6ee50b7b844186ec2c92de641d1
+  url: https://github.com/steffengraber/nest-simulator/archive/{{ version }}.zip
+  sha256: 5f76a76e46f409ca71b8035f3a32f625620bd390ff99de50ec425aa1e0dc6cb7
 
 build:
   number: {{ build }}
