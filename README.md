@@ -12,6 +12,23 @@ focuses on the dynamics, size and structure of neural systems rather than
 on the exact morphology of individual neurons.
 
 
+You can use NEST either as a for the interpreted programming language Python (PyNEST) or as a stand alone
+application (nest). PyNEST provides a set of commands to the Python interpreter which give you access to NEST's
+simulation kernel. With these commands, you describe and run your network simulation. You can also complement
+PyNEST with PyNN, a simulator-independent set of Python commands to formulate and run neural simulations. While
+you define your simulations in Python, the actual simulation is executed within NEST's highly optimized
+simulation kernel which is written in C++.
+A NEST simulation tries to follow the logic of an electrophysiological experiment that takes place inside a
+computer with the difference, that the neural system to be investigated must be defined by the experimenter.
+The neural system is defined by a possibly large number of neurons and their connections. In a NEST network,
+different neuron and synapse models can coexist. Any two neurons can have multiple connections with different
+properties. Thus, the connectivity can in general not be described by a weight or connectivity matrix but rather
+as an adjacency list.
+To manipulate or observe the network dynamics, the experimenter can define so-called devices which represent the
+various instruments (for measuring and stimulation) found in an experiment. These devices write their data
+either to memory or to file.
+NEST is extensible and new models for neurons, synapses, and devices can be added.
+To get started with NEST, please see the documentation page <https://nest-simulator.org/documentation/>.
 
 
 Current build status
