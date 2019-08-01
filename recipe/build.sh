@@ -17,7 +17,6 @@ fi
 mkdir build
 cd build
 
-
 mpi_arg=""
 if [[ "$mpi" != "nompi" ]]; then
   mpi_arg="ON"
