@@ -8,18 +8,27 @@ if [[ $(uname) == Linux ]]; then
 	export LDFLAGS="-L${PREFIX}/lib"
 fi
 
-if [[ $(uname) == Darwin ]]; then
-	echo 'export ${PREFIX}/bin:$PATH"' >> ~/.bash_profile
-	export CPPFLAGS="$(echo ${CPPFLAGS:-} | sed -E 's@\-mmacosx\-version\-min=[^ ]*@@g')"
-    export CPPFLAGS="${CPPFLAGS} -D_DARWIN_C_SOURCE"
-    echo "CPPFLAGS=$CPPFLAGS"
+if [[ ${target_platform} == osx-64 ]]; then
+  CC=$(basename "${CC}")
+else
+  CC=$(basename "${GCC}")
+fi
 
+if [[ $(uname) == Darwin ]] && [[ -n ${CONDA_BUILD_SYSROOT} ]]; then
+	echo 'export ${PREFIX}/bin:$PATH"' >> ~/.bash_profile
+	CFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CFLAGS}
+    LDFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${LDFLAGS}
+    CPPFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CPPFLAGS}
 	# export LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib"
 	# export CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/include/c++/v1/"
 	# Using Travis standard gcc and g++
 	# export CC=$(ls /usr/local/bin/gcc-* | grep '^/usr/local/bin/gcc-\d$')
     # export CXX=$(ls /usr/local/bin/g++-* | grep '^/usr/local/bin/g++-\d$')
 fi
+
+CPPFLAGS=${CPPFLAGS}" -I${PREFIX}/include"
+
+export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
 mkdir build
 cd build
