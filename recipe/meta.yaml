@@ -78,7 +78,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
-    - openmp  # [linux][linux][mpi != 'nompi']
+    - openmp  # [linux][mpi != 'nompi']
     - python
     - python.app  # [osx]
     - readline
