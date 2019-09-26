@@ -1,3 +1,7 @@
+MACOSX_DEPLOYMENT_TARGET:
+  - '10.3'  # [osx]
+macos_min_version:
+  - '10.3'  # [osx]
 mpi:
   - nompi
   - openmpi
