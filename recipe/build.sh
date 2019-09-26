@@ -10,8 +10,11 @@ fi
 
 if [[ $(uname) == Darwin ]]; then
 	echo 'export ${PREFIX}/bin:$PATH"' >> ~/.bash_profile
-	export LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib"
-	export CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/include/c++/v1/"
+	# export LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib"
+	# export CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/include/c++/v1/"
+	# Using Travis standard gcc and g++
+	export CC=$(ls /usr/local/bin/gcc-* | grep '^/usr/local/bin/gcc-\d$')
+    export CXX=$(ls /usr/local/bin/g++-* | grep '^/usr/local/bin/g++-\d$')
 fi
 
 mkdir build
@@ -41,8 +44,8 @@ fi
 if [[ $(uname) == Darwin ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 		  -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
-		  -Dwith-mpi=${mpi_arg} \
-		  -Dwith-openmp=${mpi_arg} \
+		  -Dwith-mpi=NO \
+		  -Dwith-openmp=NO \
 		  -Dwith-python=3 \
 		  -DPYTHON_EXECUTABLE=${PYTHON}\
 		  -DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PY_VER}.dylib \
