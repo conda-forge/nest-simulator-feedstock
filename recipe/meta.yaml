@@ -1,7 +1,7 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.18.0" %}
 
-{% set build = 1 %}
+{% set build = 3 %}
 
 # mpi must be defined for conda-smithy lint
 {% set mpi = mpi or 'nompi' %}
@@ -34,7 +34,7 @@ build:
   # examle see;
   # https://github.com/conda-forge/h5py-feedstock/blob/master/recipe/meta.yaml
   string: "{{ mpi_prefix }}_py{{ py }}h{{ PKG_HASH }}_{{ build }}"
-  skip: true  # [win and py<30]
+  skip: true  # [win or py<30]
   # osx_is_app: True
 
 requirements:
