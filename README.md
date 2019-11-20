@@ -7,9 +7,8 @@ Package license: GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: NEST is a simulator for spiking neural network models that
-focuses on the dynamics, size and structure of neural systems rather than
-on the exact morphology of individual neurons.
+Summary: NEST is a simulator for spiking neural network models that focuses on the dynamics, size and structure of neural
+systems rather than on the exact morphology of individual neurons.
 
 
 You can use NEST either as a for the interpreted programming language Python (PyNEST) or as a stand alone
@@ -61,6 +60,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_mpinompipython3.8target_platformlinux-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_mpinompipython3.8target_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_mpiopenmpipython3.6target_platformlinux-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
@@ -72,6 +78,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_mpiopenmpipython3.7target_platformlinux-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_mpiopenmpipython3.8target_platformlinux-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_mpiopenmpipython3.8target_platformlinux-64" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -89,6 +102,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_mpinompipython3.8target_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_mpinompipython3.8target_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_mpiopenmpipython3.6target_platformosx-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
@@ -100,6 +120,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_mpiopenmpipython3.7target_platformosx-64" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_mpiopenmpipython3.8target_platformosx-64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_mpiopenmpipython3.8target_platformosx-64" alt="variant">
                 </a>
               </td>
             </tr>
