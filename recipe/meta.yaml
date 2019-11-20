@@ -45,9 +45,9 @@ requirements:
     # - git
     - llvm-openmp  # [osx]
     - make
-    # - openmp  # [linux][mpi != 'nompi']
+    - openmp  # [linux][mpi != 'nompi']
     # - sed
-    # - {{ compiler('c') }}
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - cython
@@ -82,9 +82,9 @@ requirements:
     - python
     - python.app  # [osx]
     - readline
-    # - scipy
+    - scipy
     - statsmodels
-    # - openssh
+    - openssh
     - zlib
 
 test:
