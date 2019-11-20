@@ -7,9 +7,8 @@ Package license: GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: NEST is a simulator for spiking neural network models that
-focuses on the dynamics, size and structure of neural systems rather than
-on the exact morphology of individual neurons.
+Summary: NEST is a simulator for spiking neural network models that focuses on the dynamics, size and structure of neural
+systems rather than on the exact morphology of individual neurons.
 
 
 You can use NEST either as a for the interpreted programming language Python (PyNEST) or as a stand alone

@@ -1,7 +1,5 @@
-c_compiler:
-- gcc
-c_compiler_version:
-- '7'
+CONDA_BUILD_SYSROOT:
+- /opt/MacOSX10.10.sdk
 channel_sources:
 - conda-forge,defaults
 channel_targets:
