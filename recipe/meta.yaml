@@ -40,12 +40,12 @@ build:
 requirements:
   build:
     - cmake >=3.6
-    - git
+    # - git
     - llvm-openmp  # [osx]
     - make
-    - openmp  # [linux][mpi != 'nompi']
-    - sed
-    - {{ compiler('c') }}
+    # - openmp  # [linux][mpi != 'nompi']
+    # - sed
+    # - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - cython
@@ -53,9 +53,9 @@ requirements:
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
-    - matplotlib
+    # - matplotlib
     - {{ pin_compatible('ncurses') }}
-    - {{ pin_compatible('numpy') }}
+    # - {{ pin_compatible('numpy') }}
     - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py  # [mpi != 'nompi']
     - openmp  # [linux][mpi != 'nompi']
@@ -80,9 +80,9 @@ requirements:
     - python
     - python.app  # [osx]
     - readline
-    - scipy
+    # - scipy
     - statsmodels
-    - openssh
+    # - openssh
     - zlib
 
 test:
