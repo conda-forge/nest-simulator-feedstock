@@ -1,8 +1,8 @@
 diff --git a/cmake/NestVersionInfo.cmake b/cmake/NestVersionInfo.cmake
-index cbb8bb420..1be909f83 100644
+index cbb8bb420..d0187999a 100644
 --- a/cmake/NestVersionInfo.cmake
 +++ b/cmake/NestVersionInfo.cmake
-@@ -32,30 +32,32 @@
+@@ -32,26 +32,28 @@
  
  
  macro(get_version_info)
@@ -12,13 +12,13 @@ index cbb8bb420..1be909f83 100644
 -        OUTPUT_STRIP_TRAILING_WHITESPACE
 -        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 -    )
-+if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
-+       execute_process(
-+            COMMAND "git" "rev-parse" "--short" "HEAD"
-+            OUTPUT_VARIABLE NEST_VERSION_GITHASH
-+            OUTPUT_STRIP_TRAILING_WHITESPACE
-+            WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-+        )
++   if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.git")
++	   execute_process(
++			COMMAND "git" "rev-parse" "--short" "HEAD"
++			OUTPUT_VARIABLE NEST_VERSION_GITHASH
++			OUTPUT_STRIP_TRAILING_WHITESPACE
++			WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
++		)
  
 -    execute_process(
 -        COMMAND "git" "rev-parse" "--abbrev-ref" "HEAD"
@@ -26,32 +26,25 @@ index cbb8bb420..1be909f83 100644
 -        OUTPUT_STRIP_TRAILING_WHITESPACE
 -        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
 -    )
-+        execute_process(
-+            COMMAND "git" "rev-parse" "--abbrev-ref" "HEAD"
-+            OUTPUT_VARIABLE NEST_VERSION_BRANCH
-+            OUTPUT_STRIP_TRAILING_WHITESPACE
-+            WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-+        )
++		execute_process(
++			COMMAND "git" "rev-parse" "--abbrev-ref" "HEAD"
++			OUTPUT_VARIABLE NEST_VERSION_BRANCH
++			OUTPUT_STRIP_TRAILING_WHITESPACE
++			WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
++		)
  
 -    if (NEST_VERSION_SUFFIX)
 -        set(versionsuffix "-${NEST_VERSION_SUFFIX}")
 -    endif()
-+        if (NEST_VERSION_SUFFIX)
-+            set(versionsuffix "-${NEST_VERSION_SUFFIX}")
-+        endif()
++		if (NEST_VERSION_SUFFIX)
++			set(versionsuffix "-${NEST_VERSION_SUFFIX}")
++		endif()
  
 -    if (NEST_VERSION_GITHASH)
 -        set(githash "@${NEST_VERSION_GITHASH}")
--    endif()
-+        if (NEST_VERSION_GITHASH)
-+            set(githash "@${NEST_VERSION_GITHASH}")
-+        endif()
- 
--    if (NOT NEST_VERSION_BRANCH)
--        set(NEST_VERSION_BRANCH "nest-2.18.0")
-+        if (NOT NEST_VERSION_BRANCH)
-+            set(NEST_VERSION_BRANCH "nest-2.18.0")
-+        endif()
++		if (NEST_VERSION_GITHASH)
++			set(githash "@${NEST_VERSION_GITHASH}")
++		endif()
      endif()
  
-     string(SUBSTRING "${NEST_VERSION_BRANCH}" 0 5 isRelease)
+     if (NOT NEST_VERSION_BRANCH)
