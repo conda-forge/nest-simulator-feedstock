@@ -1,7 +1,7 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.18.0" %}
 
-{% set build = 6 %}
+{% set build = 7 %}
 
 # mpi must be defined for conda-smithy lint
 {% set mpi = mpi or 'nompi' %}
