@@ -17,7 +17,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: cebcf284089b2f47f1570bcf33480eaabeda75c9a1dea552fbf657f03094001b
+  sha256: 40e33187c22d6e843d80095b221fa7fd5ebe4dbc0116765a91fc5c425dd0eca4
 
 build:
   number: {{ build }}
