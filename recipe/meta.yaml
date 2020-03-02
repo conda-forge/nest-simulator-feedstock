@@ -1,7 +1,7 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.20.0" %}
 
-{% set build = 3 %}
+{% set build = 4 %}
 
 # mpi must be defined for conda-smithy lint
 {% set mpi = mpi or 'nompi' %}
@@ -50,6 +50,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - boost-cpp
+    - boost
     - cython
     - gsl
     - {{ pin_compatible('libcblas') }}
@@ -68,6 +70,8 @@ requirements:
     - statsmodels
     - zlib
   run:
+    - boost-cpp
+    - boost
     - cython
     - gsl
     - {{ pin_compatible('libcblas') }}
