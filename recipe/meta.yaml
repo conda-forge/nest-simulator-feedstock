@@ -50,6 +50,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - boost-cpp
+    - boost
     - cython
     - gsl
     - {{ pin_compatible('libcblas') }}
@@ -68,6 +70,8 @@ requirements:
     - statsmodels
     - zlib
   run:
+    - boost-cpp
+    - boost
     - cython
     - gsl
     - {{ pin_compatible('libcblas') }}
