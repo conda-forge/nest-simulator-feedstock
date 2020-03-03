@@ -42,11 +42,9 @@ build:
 requirements:
   build:
     - cmake >=3.6
-    # - git
     - llvm-openmp  # [osx]
     - make
     - openmp  # [linux][mpi != 'nompi']
-    # - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
