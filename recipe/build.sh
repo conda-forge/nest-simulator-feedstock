@@ -44,7 +44,7 @@ echo "Der MPI-Flag lautet: ${mpi_arg}"
 # Linux build
 if [[ $(uname) == Linux ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-	    -Dwith-boost=ON \
+	    -Dwith-boost=OFF \
 		  -Dwith-mpi=${mpi_arg} \
 		  -Dwith-openmp=${mpi_arg} \
 		  -Dwith-python=3 \
@@ -57,7 +57,7 @@ fi
 # OSX build
 if [[ $(uname) == Darwin ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-	    -Dwith-boost=ON \
+	    -Dwith-boost=OFF \
 		  -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
 		  -Dwith-mpi=${mpi_arg} \
 		  -Dwith-openmp=${mpi_arg} \
