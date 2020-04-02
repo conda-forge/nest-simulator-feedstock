@@ -1,0 +1,41 @@
+# This file was generated automatically from conda-smithy. To update this configuration,
+# update the conda-forge.yml and/or the recipe/meta.yaml.
+
+language: generic
+
+env:
+  global:
+    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
+    - secure: "QDJ+3wreSo84AGL7j5EwoYt4YT6U0qFPLlCh7Bw5BBSMyDdCjfR0xuJ/A+aXNkxp7QcHKVl0M5JDbyTShHq+mKRdfVVcrGTN2BMnNwhHtI3He5OYoJHszPZduY76WlFf4AXeOxtxiqomklKoHM1Bc8bq8lF5GuEYXQT9w5TXA+RLpyiEJfAfHEtWLykQ1Y7Jsv+hXwSsQe2iS2QcimlJuLLMrK8z0a4tuD43NQZVBu+XkhN3K16cnDVtHjgpYK55a0lmVJK73VmNNhUp0CqFaRo5/rLzCRt+XzQcOJk5GudzmfI0kt0xrsv4HH+AO6nbBobsVx29MX3q5/1wD5VU0CJ/V+sUCVGwbApsFWIriSKx/XCVV2IJ2MwL2Y+GvBLE6ItHKt8DUk5vU3vAkI68IorQdXqVVNqUX1zxpcxCXlCl9u/4B/coKHEJH1PzNf+c4beGSGVKuAKWszuKALLFUd1L8/Xfi+9Vux5tmC+nrT3odng2uB/hQH6zheztELBWiZiD8LgthgUgwgN2Sd2B8gtSxGMvVx/RDtNcHyoR+ToCHNHeDqWUEpO5A+CirLqxPKEDBqDLQwkosDIsrKD+rvkt6UZSJqy1Jq/jvM3daz8+d4Rb4eFyvpjpJYloFApBppTxMtNfh0C6dEIxG4hPmRL/VSx5geVcGW+n3MexG5M="
+
+matrix:
+  include:
+    - env: CONFIG=osx_mpinompipython3.6.____cpythontarget_platformosx-64 UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode9.4
+
+    - env: CONFIG=osx_mpinompipython3.7.____cpythontarget_platformosx-64 UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode9.4
+
+    - env: CONFIG=osx_mpinompipython3.8.____cpythontarget_platformosx-64 UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode9.4
+
+    - env: CONFIG=osx_mpiopenmpipython3.6.____cpythontarget_platformosx-64 UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode9.4
+
+    - env: CONFIG=osx_mpiopenmpipython3.7.____cpythontarget_platformosx-64 UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode9.4
+
+    - env: CONFIG=osx_mpiopenmpipython3.8.____cpythontarget_platformosx-64 UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode9.4
+
+script:
+  - export CI=travis
+  - export GIT_BRANCH="$TRAVIS_BRANCH"
+
+  - if [[ ${PLATFORM} =~ .*osx.* ]]; then ./.travis/run_osx_build.sh; fi
