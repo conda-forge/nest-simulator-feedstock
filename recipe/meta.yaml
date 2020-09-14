@@ -50,7 +50,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost-cpp
     - boost
     - cython
     - gsl
@@ -70,7 +69,6 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - boost-cpp
     - boost
     - cython
     - gsl
