@@ -5,11 +5,15 @@ Home: http://www.nest-simulator.org/
 
 Package license: GPL-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nest-simulator-feedstock/blob/master/LICENSE.txt)
 
 Summary: NEST is a simulator for spiking neural network models that focuses on the dynamics, size and structure of neural
 systems rather than on the exact morphology of individual neurons.
 
+
+Development: https://github.com/nest/nest-simulator
+
+Documentation: https://nest-simulator.readthedocs.io/en/latest/
 
 You can use NEST either as a for the interpreted programming language Python (PyNEST) or as a stand alone
 application (nest). PyNEST provides a set of commands to the Python interpreter which give you access to NEST's
@@ -46,339 +50,227 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpinompipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpinompipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpinompipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpinompipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpinompipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpinompipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpinompipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpinompipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpiopenmpipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpiopenmpipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpiopenmpipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpiopenmpipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpiopenmpipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpiopenmpipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.72.0mpiopenmpipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0mpiopenmpipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpinompipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpinompipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpinompipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpinompipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpinompipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpinompipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpinompipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpinompipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpiopenmpipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpiopenmpipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpiopenmpipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpiopenmpipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpiopenmpipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpiopenmpipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>linux_64_boost1.74.0mpiopenmpipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0mpiopenmpipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpinompipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpinompipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpinompipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpinompipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpinompipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpinompipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpinompipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpinompipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpiopenmpipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpiopenmpipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpiopenmpipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpiopenmpipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpiopenmpipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpiopenmpipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64</td>
+              <td>osx_64_boost1.72.0mpiopenmpipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=linux&configuration=linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0mpiopenmpipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpinompipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpinompipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpinompipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpinompipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpinompipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpinompipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpinompipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpinompipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpiopenmpipython3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpiopenmpipython3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpiopenmpipython3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpiopenmpipython3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpiopenmpipython3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpiopenmpipython3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformosx-64</td>
+              <td>osx_64_boost1.74.0mpiopenmpipython3.9.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformosx-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformosx-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=master&jobName=osx&configuration=osx_64_boost1.74.0mpiopenmpipython3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr>

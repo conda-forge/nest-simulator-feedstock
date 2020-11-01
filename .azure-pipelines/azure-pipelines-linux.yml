@@ -8,103 +8,70 @@ jobs:
     vmImage: ubuntu-16.04
   strategy:
     matrix:
-      linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpinompipython3.6.____cpython:
+        CONFIG: linux_64_boost1.72.0mpinompipython3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpinompipython3.7.____cpython:
+        CONFIG: linux_64_boost1.72.0mpinompipython3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpinompipython3.8.____cpython:
+        CONFIG: linux_64_boost1.72.0mpinompipython3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpinompipython3.9.____cpython:
+        CONFIG: linux_64_boost1.72.0mpinompipython3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpiopenmpipython3.6.____cpython:
+        CONFIG: linux_64_boost1.72.0mpiopenmpipython3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpiopenmpipython3.7.____cpython:
+        CONFIG: linux_64_boost1.72.0mpiopenmpipython3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpiopenmpipython3.8.____cpython:
+        CONFIG: linux_64_boost1.72.0mpiopenmpipython3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64
+      linux_64_boost1.72.0mpiopenmpipython3.9.____cpython:
+        CONFIG: linux_64_boost1.72.0mpiopenmpipython3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpinompipython3.6.____cpython:
+        CONFIG: linux_64_boost1.74.0mpinompipython3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpinompipython3.7.____cpython:
+        CONFIG: linux_64_boost1.74.0mpinompipython3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpinompipython3.8.____cpython:
+        CONFIG: linux_64_boost1.74.0mpinompipython3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.72.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpinompipython3.9.____cpython:
+        CONFIG: linux_64_boost1.74.0mpinompipython3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.6.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpiopenmpipython3.6.____cpython:
+        CONFIG: linux_64_boost1.74.0mpiopenmpipython3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.7.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpiopenmpipython3.7.____cpython:
+        CONFIG: linux_64_boost1.74.0mpiopenmpipython3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.72.0mpinompipython3.8.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpiopenmpipython3.8.____cpython:
+        CONFIG: linux_64_boost1.74.0mpiopenmpipython3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64
+      linux_64_boost1.74.0mpiopenmpipython3.9.____cpython:
+        CONFIG: linux_64_boost1.74.0mpiopenmpipython3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.72.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.6.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.7.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.74.0mpinompipython3.8.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.6.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.7.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-      linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64:
-        CONFIG: linux_64_boost1.74.0boost_cpp1.74.0mpiopenmpipython3.8.____cpythontarget_platformlinux-64
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: condaforge/linux-anvil-comp7
-    maxParallel: 8
   timeoutInMinutes: 360
 
   steps:
