@@ -21,11 +21,11 @@ source:
 
 build:
   number: {{ build }}
-  {% if mpi != 'nompi' %}
-  {% set mpi_prefix = "mpi_" + mpi %}
-  {% else %}
+  #{% if mpi != 'nompi' %}
+  #{% set mpi_prefix = "mpi_" + mpi %}
+  #{% else %}
   {% set mpi_prefix = "nompi" %}
-  {% endif %}
+  #{% endif %}
   # add build string so packages can depend on
   # mpi or nompi variants
   # dependencies:
@@ -41,9 +41,9 @@ requirements:
   build:
     - cmake >=3.6
     # - git
-    - llvm-openmp  # [osx]
+    #- llvm-openmp  # [osx]
     - make
-    - openmp  # [linux][mpi != 'nompi']
+    #- openmp  # [linux][mpi != 'nompi']
     # - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -53,13 +53,13 @@ requirements:
     - gsl
     - {{ pin_compatible('libcblas') }}
     - libtool
-    - llvm-openmp  # [osx]
+    #- llvm-openmp  # [osx]
     # - matplotlib
     - {{ pin_compatible('ncurses') }}
     # - {{ pin_compatible('numpy') }}
-    - {{ mpi }}  # [mpi != 'nompi']
-    - mpi4py  # [mpi != 'nompi']
-    - openmp  # [linux][mpi != 'nompi']
+    # - {{ mpi }}  # [mpi != 'nompi']
+    # - mpi4py  # [mpi != 'nompi']
+    # - openmp  # [linux][mpi != 'nompi']
     - python
     - readline
     - scipy
@@ -76,9 +76,9 @@ requirements:
     # - matplotlib
     - {{ pin_compatible('ncurses') }}
     # - {{ pin_compatible('numpy') }}
-    - {{ mpi }}  # [mpi != 'nompi']
-    - mpi4py  # [mpi != 'nompi']
-    - openmp  # [linux][mpi != 'nompi']
+    # - {{ mpi }}  # [mpi != 'nompi']
+    # - mpi4py  # [mpi != 'nompi']
+    # - openmp  # [linux][mpi != 'nompi']
     - python
     - python.app  # [osx]
     - readline
@@ -96,7 +96,7 @@ test:
 
 about:
   home: http://www.nest-simulator.org/
-  license: GPL-2.0
+  license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
   summary: |
