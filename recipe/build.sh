@@ -24,10 +24,12 @@ if [[ $(uname) == Darwin ]] && [[ -n ${CONDA_BUILD_SYSROOT} ]]; then
 	# Using Travis standard gcc and g++
 	# export CC=$(ls /usr/local/bin/gcc-* | grep '^/usr/local/bin/gcc-\d$')
     # export CXX=$(ls /usr/local/bin/g++-* | grep '^/usr/local/bin/g++-\d$')
+else
+    CXXFLAGS="${CXXFLAGS} -lrt"
 fi
 
 CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-CXXFLAGS="${CXXFLAGS} -lrt"
+
 
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
