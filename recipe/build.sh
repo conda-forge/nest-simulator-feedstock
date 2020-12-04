@@ -34,13 +34,7 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 mkdir build
 cd build
 
-mpi_arg=""
-if [[ "$mpi" != "nompi" ]]; then
-  mpi_arg="ON"
-else
-	mpi_arg="OFF"
-fi
-echo "Der MPI-Flag lautet: ${mpi_arg}"
+mpi_arg="OFF"
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
