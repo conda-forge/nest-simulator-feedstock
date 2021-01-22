@@ -40,6 +40,7 @@ mpi_arg="OFF"
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
+
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 	    -Dwith-boost=ON \
 		  -Dwith-mpi=OFF \

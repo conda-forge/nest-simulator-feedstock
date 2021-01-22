@@ -43,7 +43,8 @@ requirements:
     # - git
     #- llvm-openmp  # [osx]
     - make
-    #- openmp  # [linux][mpi != 'nompi']
+    - openmp  # [linux]
+    # - openmp  # [linux][mpi != 'nompi']
     # - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -57,6 +58,8 @@ requirements:
     # - matplotlib
     - {{ pin_compatible('ncurses') }}
     # - {{ pin_compatible('numpy') }}
+    - mpi4py
+    - openmp  # [linux]
     # - {{ mpi }}  # [mpi != 'nompi']
     # - mpi4py  # [mpi != 'nompi']
     # - openmp  # [linux][mpi != 'nompi']
@@ -77,6 +80,8 @@ requirements:
     - {{ pin_compatible('ncurses') }}
     # - {{ pin_compatible('numpy') }}
     # - {{ mpi }}  # [mpi != 'nompi']
+    - mpi4py
+    - openmp  # [linux]
     # - mpi4py  # [mpi != 'nompi']
     # - openmp  # [linux][mpi != 'nompi']
     - python
