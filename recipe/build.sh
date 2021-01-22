@@ -24,25 +24,23 @@ if [[ $(uname) == Darwin ]] && [[ -n ${CONDA_BUILD_SYSROOT} ]]; then
 	# Using Travis standard gcc and g++
 	# export CC=$(ls /usr/local/bin/gcc-* | grep '^/usr/local/bin/gcc-\d$')
     # export CXX=$(ls /usr/local/bin/g++-* | grep '^/usr/local/bin/g++-\d$')
+else
+    CXXFLAGS="${CXXFLAGS} -lrt"
 fi
 
-CPPFLAGS=${CPPFLAGS}" -I${PREFIX}/include"
+CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
+
 
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
 mkdir build
 cd build
 
-mpi_arg=""
-if [[ "$mpi" != "nompi" ]]; then
-  mpi_arg="ON"
-else
-	mpi_arg="OFF"
-fi
-echo "Der MPI-Flag lautet: ${mpi_arg}"
+mpi_arg="OFF"
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
+
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 	    -Dwith-boost=ON \
 		  -Dwith-mpi=OFF \
@@ -52,10 +50,12 @@ if [[ $(uname) == Linux ]]; then
 		  -DREADLINE_ROOT_DIR=${PREFIX} \
 		  -DLTDL_ROOT_DIR=${PREFIX} \
 		  ..
+
 fi
 
 # OSX build
 if [[ $(uname) == Darwin ]]; then
+
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 	    -Dwith-boost=ON \
 		  -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
@@ -68,6 +68,7 @@ if [[ $(uname) == Darwin ]]; then
 		  -DREADLINE_ROOT_DIR=${PREFIX} \
 		  -DLTDL_ROOT_DIR=${PREFIX} \
 		  ..
+r
 fi
 
 
