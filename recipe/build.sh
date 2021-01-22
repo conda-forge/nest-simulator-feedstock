@@ -40,31 +40,32 @@ mpi_arg="OFF"
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
-    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-        -Dwith-boost=ON \
-        -Dwith-mpi=${mpi_arg} \
-        -Dwith-openmp=${mpi_arg} \
-        -Dwith-python=3 \
-        -Dwith-gsl=${PREFIX} \
-        -DREADLINE_ROOT_DIR=${PREFIX} \
-        -DLTDL_ROOT_DIR=${PREFIX} \
-        ..
+
+	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+	    -Dwith-boost=ON \
+		  -Dwith-mpi=OFF \
+		  -Dwith-openmp=ON \
+		  -Dwith-python=3 \
+		  -Dwith-gsl=${PREFIX} \
+		  -DREADLINE_ROOT_DIR=${PREFIX} \
+		  -DLTDL_ROOT_DIR=${PREFIX} \
+		  ..
 fi
 
 # OSX build
 if [[ $(uname) == Darwin ]]; then
-    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-        -Dwith-boost=ON \
-        -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
-        -Dwith-mpi=${mpi_arg} \
-        -Dwith-openmp=${mpi_arg} \
-        -Dwith-python=3 \
-        -DPYTHON_EXECUTABLE=${PYTHON}\
-        -DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PY_VER}.dylib \
-        -Dwith-gsl=${PREFIX} \
-        -DREADLINE_ROOT_DIR=${PREFIX} \
-        -DLTDL_ROOT_DIR=${PREFIX} \
-        ..
+	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+	    -Dwith-boost=ON \
+		  -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
+		  -Dwith-mpi=OFF \
+		  -Dwith-openmp=ON \
+		  -Dwith-python=3 \
+		  -DPYTHON_EXECUTABLE=${PYTHON}\
+		  -DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PY_VER}.dylib \
+		  -Dwith-gsl=${PREFIX} \
+		  -DREADLINE_ROOT_DIR=${PREFIX} \
+		  -DLTDL_ROOT_DIR=${PREFIX} \
+		  ..
 fi
 
 
