@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.20.1" %}
-{% set build = 102 %}
+{% set build = 103 %}
 
 package:
   name: {{ name|lower }}
@@ -46,7 +46,7 @@ requirements:
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
-    - matplotlib
+    - matplotlib-base
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
