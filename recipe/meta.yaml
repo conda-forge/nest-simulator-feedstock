@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.20.1" %}
-{% set build = 2 %}
+{% set build = 103 %}
 
 package:
   name: {{ name|lower }}
