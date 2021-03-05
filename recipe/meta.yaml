@@ -13,7 +13,7 @@ source:
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: true  # [win or py<30]
+  skip: True  # [win or py<30 or python_impl == 'pypy']
 
 requirements:
   build:
