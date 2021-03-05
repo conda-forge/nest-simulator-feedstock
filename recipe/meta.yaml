@@ -1,15 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "2.20.1" %}
-
-{% set build = 0 %}
-
-# mpi must be defined for conda-smithy lint
-{% set mpi = mpi or 'nompi' %}
-
-{% if mpi == 'nompi' %}
-# prefer nompi builds via a build number offset
-{% set build = build + 100 %}
-{% endif %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -21,31 +12,15 @@ source:
 
 build:
   number: {{ build }}
-  #{% if mpi != 'nompi' %}
-  #{% set mpi_prefix = "mpi_" + mpi %}
-  #{% else %}
-  {% set mpi_prefix = "nompi" %}
-  #{% endif %}
-  # add build string so packages can depend on
-  # mpi or nompi variants
-  # dependencies:
-  # mpi_*` for any mpi
-  # nompi_*` for no mpi
-  # examle see;
-  # https://github.com/conda-forge/h5py-feedstock/blob/master/recipe/meta.yaml
-  string: {{ mpi_prefix }}_py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: true  # [win or py<30]
-  # osx_is_app: True
+  string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
+  skip: True  # [win or py<30 or python_impl == 'pypy']
 
 requirements:
   build:
-    - cmake >=3.6
-    # - git
-    #- llvm-openmp  # [osx]
+    - cmake >=3.12
+    - llvm-openmp  # [osx]
     - make
     - openmp  # [linux]
-    # - openmp  # [linux][mpi != 'nompi']
-    # - sed
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -54,15 +29,10 @@ requirements:
     - gsl
     - {{ pin_compatible('libcblas') }}
     - libtool
-    #- llvm-openmp  # [osx]
-    # - matplotlib
+    - llvm-openmp  # [osx]
     - {{ pin_compatible('ncurses') }}
-    # - {{ pin_compatible('numpy') }}
     - mpi4py
     - openmp  # [linux]
-    # - {{ mpi }}  # [mpi != 'nompi']
-    # - mpi4py  # [mpi != 'nompi']
-    # - openmp  # [linux][mpi != 'nompi']
     - python
     - readline
     - scipy
@@ -76,14 +46,10 @@ requirements:
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
-    # - matplotlib
+    - matplotlib
     - {{ pin_compatible('ncurses') }}
-    # - {{ pin_compatible('numpy') }}
-    # - {{ mpi }}  # [mpi != 'nompi']
     - mpi4py
     - openmp  # [linux]
-    # - mpi4py  # [mpi != 'nompi']
-    # - openmp  # [linux][mpi != 'nompi']
     - python
     - python.app  # [osx]
     - readline
@@ -101,7 +67,7 @@ test:
 
 about:
   home: http://www.nest-simulator.org/
-  license: GPL-2.0-only
+  license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: |
