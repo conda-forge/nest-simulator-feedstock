@@ -20,6 +20,7 @@ requirements:
     - cmake >=3.12
     - llvm-openmp  # [osx]
     - make
+    - python >=3.8
     - openmp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -33,7 +34,7 @@ requirements:
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
-    - python
+    - python >=3.8
     - readline
     - scipy
     - openssh
@@ -50,7 +51,7 @@ requirements:
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
-    - python
+    - python >=3.8
     - python.app  # [osx]
     - readline
     - scipy
