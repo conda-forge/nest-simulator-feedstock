@@ -13,14 +13,14 @@ source:
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: True  # [win or py<30 or python_impl == 'pypy']
+  skip: True  # [win or py<38 or python_impl == 'pypy']
 
 requirements:
   build:
     - cmake >=3.12
     - llvm-openmp  # [osx]
     - make
-    - python >=3.8
+    - python
     - openmp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -34,7 +34,7 @@ requirements:
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
-    - python >=3.8
+    - python
     - readline
     - scipy
     - openssh
@@ -51,7 +51,7 @@ requirements:
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
-    - python >=3.8
+    - python
     - python.app  # [osx]
     - readline
     - scipy
