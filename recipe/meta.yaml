@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
-{% set version = "2.20.1" %}
-{% set build = 103 %}
+{% set version = "3.0" %}
+{% set build = 104 %}
 
 package:
   name: {{ name|lower }}
@@ -8,18 +8,20 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: df3d32b5899d5d444f708037b290f889ac6ff8eae6b7be9e9faee2c0d660d8e5
+  sha256: d481ea67f3251fe3aadf5252ab0a999172f0cd5536c5985366d271d772e686e6
 
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: True  # [win or py<30 or python_impl == 'pypy']
+  skip: True  # [win or py<38 or python_impl == 'pypy']
 
 requirements:
   build:
     - cmake >=3.12
+    - cython
     - llvm-openmp  # [osx]
     - make
+    - python
     - openmp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
