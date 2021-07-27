@@ -9,11 +9,13 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: d481ea67f3251fe3aadf5252ab0a999172f0cd5536c5985366d271d772e686e6
+  patches:
+    - 2021-07-17_fix-pyexecdir.patch
 
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: True  # [win or py<30 or python_impl == 'pypy']
+  skip: True  # [win or py<38 or python_impl == 'pypy']
 
 requirements:
   build:
