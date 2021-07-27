@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: d481ea67f3251fe3aadf5252ab0a999172f0cd5536c5985366d271d772e686e6
+  patches:
+    - 2021-07-17_fix-pyexecdir.patch
 
 build:
   number: {{ build }}
@@ -21,24 +23,28 @@ requirements:
     - cython
     - llvm-openmp  # [osx]
     - make
-    - python
-    - openmp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - boost
     - cython
     - gsl
+    - ipython
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
     - {{ pin_compatible('ncurses') }}
+    - matplotlib-base
     - mpi4py
+    - nose
+    - numpy
     - openmp  # [linux]
     - python
+    - pip
     - readline
     - scipy
     - openssh
+    - setuptools
     - statsmodels
     - zlib
   run:
@@ -50,6 +56,7 @@ requirements:
     - llvm-openmp  # [osx]
     - matplotlib-base
     - {{ pin_compatible('ncurses') }}
+    - {{ pin_compatible('numpy') }}
     - mpi4py
     - openmp  # [linux]
     - python
