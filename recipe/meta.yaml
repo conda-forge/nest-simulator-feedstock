@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - cmake >=3.12
+    - cython
     - llvm-openmp  # [osx]
     - make
     - openmp  # [linux]
@@ -30,7 +31,6 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - boost
-    - cython
     - gsl
     - {{ pin_compatible('libcblas') }}
     - libtool
