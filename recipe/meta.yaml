@@ -23,6 +23,9 @@ requirements:
     - llvm-openmp  # [osx]
     - make
     - openmp  # [linux]
+    - pip
+    - python
+    - setuptools
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -35,7 +38,6 @@ requirements:
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
-    - python
     - readline
     - scipy
     - openssh
