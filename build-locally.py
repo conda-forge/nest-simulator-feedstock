@@ -89,6 +89,7 @@ def main(args=None):
     ):
         run_docker_build(ns)
     elif ns.config.startswith("osx"):
+        run_osx_build(ns)
 
 
 if __name__ == "__main__":
