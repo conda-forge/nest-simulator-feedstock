@@ -1,5 +1,9 @@
 {% set name = "nest-simulator" %}
+<<<<<<< HEAD
+{% set version = "3.0" %}
+=======
 {% set version = "2.20.1" %}
+>>>>>>> upstream/master
 {% set build = 104 %}
 
 package:
@@ -8,35 +12,43 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: df3d32b5899d5d444f708037b290f889ac6ff8eae6b7be9e9faee2c0d660d8e5
+  sha256: d481ea67f3251fe3aadf5252ab0a999172f0cd5536c5985366d271d772e686e6
+  patches:
+    - 2021-07-17_fix-pyexecdir.patch
 
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: True  # [win or py<30 or python_impl == 'pypy']
+  skip: True  # [win or py<38 or python_impl == 'pypy']
 
 requirements:
   build:
     - cmake >=3.12
+    - cython
     - llvm-openmp  # [osx]
     - make
-    - openmp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - boost
     - cython
     - gsl
+    - ipython
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
     - {{ pin_compatible('ncurses') }}
+    - matplotlib-base
     - mpi4py
+    - nose
+    - numpy
     - openmp  # [linux]
     - python
+    - pip
     - readline
     - scipy
     - openssh
+    - setuptools
     - statsmodels
     - zlib
   run:
@@ -48,6 +60,7 @@ requirements:
     - llvm-openmp  # [osx]
     - matplotlib-base
     - {{ pin_compatible('ncurses') }}
+    - {{ pin_compatible('numpy') }}
     - mpi4py
     - openmp  # [linux]
     - python

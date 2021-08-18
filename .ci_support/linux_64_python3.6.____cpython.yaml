@@ -17,13 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 gsl:
-<<<<<<< HEAD:.ci_support/linux_64_numpy1.18python3.8.____cpython.yaml
-- '2.6'
-numpy:
-- '1.18'
-=======
 - '2.7'
->>>>>>> upstream/master:.ci_support/linux_64_python3.8.____cpython.yaml
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -35,7 +29,7 @@ pin_run_as_build:
   zlib:
     max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.6.* *_cpython
 python_impl:
 - cpython
 readline:
@@ -48,7 +42,6 @@ zip_keys:
 - - cdt_name
   - docker_image
 - - python
-  - numpy
   - python_impl
 zlib:
 - '1.2'
