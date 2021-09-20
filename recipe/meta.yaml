@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
-{% set version = "2.20.1" %}
-{% set build = 104 %}
+{% set version = "2.20.2" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: df3d32b5899d5d444f708037b290f889ac6ff8eae6b7be9e9faee2c0d660d8e5
+  sha256: 7c36daf673b379b8ef82d2293a4cdf2f4dbb5d25bf570cf52f41f6293c89a28d
 
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: True  # [win or py<30 or python_impl == 'pypy']
+  skip: true  # [win or py<30 or python_impl == 'pypy']
 
 requirements:
   build:
