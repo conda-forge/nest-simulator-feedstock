@@ -30,7 +30,6 @@ cd build
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
-
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-boost=ON \
         -Dwith-openmp=ON \
