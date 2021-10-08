@@ -8,9 +8,12 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
+<<<<<<< HEAD
       osx_64_python3.7.____cpython:
         CONFIG: osx_64_python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+=======
+>>>>>>> 03299c609ae15acbb108e1bc453b776bcd9a2ec5
       osx_64_python3.8.____cpython:
         CONFIG: osx_64_python3.8.____cpython
         UPLOAD_PACKAGES: 'True'

@@ -50,6 +50,7 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+<<<<<<< HEAD
               <td>linux_64_python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
@@ -57,6 +58,8 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+=======
+>>>>>>> 03299c609ae15acbb108e1bc453b776bcd9a2ec5
               <td>linux_64_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
@@ -71,6 +74,7 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+<<<<<<< HEAD
               <td>osx_64_python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
@@ -78,6 +82,8 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+=======
+>>>>>>> 03299c609ae15acbb108e1bc453b776bcd9a2ec5
               <td>osx_64_python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=master">
