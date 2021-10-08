@@ -3,7 +3,7 @@
 export MPI_FLAGS=--allow-run-as-root
 
 if [[ $(uname) == Linux ]]; then
-    export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
+  export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
 	export CFLAGS="-I${PREFIX}/include"
 	export LDFLAGS="-L${PREFIX}/lib"
 fi
@@ -16,7 +16,6 @@ fi
 
 if [[ $(uname) == Darwin ]] && [[ -n ${CONDA_BUILD_SYSROOT} ]]; then
 	echo 'export ${PREFIX}/bin:$PATH"' >> ~/.bash_profile
-	CFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CFLAGS}
     LDFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${LDFLAGS}
     CPPFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CPPFLAGS}
 else
@@ -31,16 +30,18 @@ cd build
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
-
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-        -Dwith-boost=ON \
-        -Dwith-openmp=ON \
-        -Dwith-python=ON \
-        -Dwith-gsl=${PREFIX} \
-        -DREADLINE_ROOT_DIR=${PREFIX} \
-        -DLTDL_ROOT_DIR=${PREFIX} \
 ..
 fi
+
+#    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+#        -Dwith-boost=ON \
+#        -Dwith-openmp=ON \
+#        -Dwith-python=ON \
+#        -Dwith-gsl=ON ${PREFIX} \
+#        -Dwith-readline=ON ${PREFIX} \
+#        -Dwith-ltdl=ON ${PREFIX} \
+
 
 # OSX build
 if [[ $(uname) == Darwin ]]; then
