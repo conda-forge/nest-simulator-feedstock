@@ -54,6 +54,8 @@ requirements:
     - statsmodels
     - zlib
 test:
+  imports:
+    - nest
   commands:
     - nest --help
     - sli --help
