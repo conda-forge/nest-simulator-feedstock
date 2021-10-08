@@ -31,14 +31,17 @@ cd build
 # Linux build
 if [[ $(uname) == Linux ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-        -Dwith-boost=ON \
-        -Dwith-openmp=ON \
-        -Dwith-python=ON \
-        -Dwith-gsl=ON ${PREFIX} \
-        -Dwith-readline=ON ${PREFIX} \
-        -Dwith-ltdl=ON ${PREFIX} \
 ..
 fi
+
+#    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+#        -Dwith-boost=ON \
+#        -Dwith-openmp=ON \
+#        -Dwith-python=ON \
+#        -Dwith-gsl=ON ${PREFIX} \
+#        -Dwith-readline=ON ${PREFIX} \
+#        -Dwith-ltdl=ON ${PREFIX} \
+
 
 # OSX build
 if [[ $(uname) == Darwin ]]; then
