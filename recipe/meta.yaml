@@ -10,11 +10,6 @@ source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 5c11dd6b451c4c6bf93037bf29d5231c6c75a0e1a8863344f6fb9bb225f279ca
 
-channels:
-  - conda-forge
-  - defaults
-channek_priority: strict
-
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
