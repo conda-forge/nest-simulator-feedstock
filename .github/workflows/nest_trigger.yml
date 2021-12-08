@@ -1,0 +1,26 @@
+on:
+  workflow_call:
+    inputs:
+      commit_name:
+        required: true
+        type: string
+      commit_hash:
+        required: true
+        type: string
+        
+jobs:
+  testbuild:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: "checkout"
+        uses: actions/checkout@v2
+      - name: "replace"
+        run: |
+          ls
+          cat meta.yaml
+          set 
+         
+          
+# source:
+#  git_url: https://github.com/nest/nest-simulator
+#  git_ref: tag/v3.1   
