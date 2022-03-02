@@ -69,7 +69,7 @@ fi
 
 make -j${CPU_COUNT}
 make install
-cp ${PREFIX}/share/doc/examples/nest/nestrc.sli ${PREFIX}/.nestrc
+cp ${PREFIX}/share/doc/nest/help/nestrc.sli ${PREFIX}/.nestrc
 if [[ -d ${PREFIX}/lib64 ]]
 then
     cp -R ${PREFIX}/lib64/* ${PREFIX}/lib
