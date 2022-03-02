@@ -23,12 +23,13 @@ requirements:
     - llvm-openmp  # [osx]
     - make
     - openmp  # [linux]
+    - openmpi
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost
+    - boost >=1.69
     - cython
-    - gsl
+    - gsl >=1.11
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
@@ -42,7 +43,7 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - boost
+    - boost >=1.69
     - cython
     - gsl
     - {{ pin_compatible('libcblas') }}
@@ -50,8 +51,9 @@ requirements:
     - llvm-openmp  # [osx]
     - matplotlib-base
     - {{ pin_compatible('ncurses') }}
-    - python3-mpi4py
+    - mpi4py
     - openmp  # [linux]
+    - openmpi
     - python
     - python.app  # [osx]
     - readline
