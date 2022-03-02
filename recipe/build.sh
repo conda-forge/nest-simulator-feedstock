@@ -31,7 +31,16 @@ cd build
 # Linux build
 if [[ $(uname) == Linux ]]; then
 	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-..
+        -DREADLINE_ROOT_DIR=$CONDA_PREFIX \
+        -Dwith-gsl=$CONDA_PREFIX \
+        -DLTDL_ROOT_DIR=$CONDA_PREFIX \
+        -Dwith-python=ON \
+        -Dwith-ltdl=OFF \
+        -Dwith-mpi=OFF \
+        -Dwith-boost=OFF \
+        -DCMAKE_CXX_COMPILER=mpic++ \
+        -DCMAKE_C_COMPILER=mpicc \
+        ..
 fi
 
 #    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
