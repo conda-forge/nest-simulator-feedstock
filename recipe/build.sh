@@ -37,7 +37,7 @@ if [[ $(uname) == Linux ]]; then
         -Dwith-python=ON \
         -Dwith-ltdl=OFF \
         -Dwith-mpi=OFF \
-        -Dwith-boost=OFF \
+        -Dwith-boost=ON \
         -DCMAKE_CXX_COMPILER=mpic++ \
         -DCMAKE_C_COMPILER=mpicc \
         ..
