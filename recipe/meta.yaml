@@ -61,11 +61,12 @@ requirements:
     - zlib
 
 test:
-  imports:
-    - nest
   commands:
+    - nest
     - nest --help
     - sli --help
+  imports:
+    - nest
 
 about:
   home: http://www.nest-simulator.org/
