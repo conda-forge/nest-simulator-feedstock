@@ -20,10 +20,7 @@ build:
 requirements:
   build:
     - cmake >=3.12
-    - llvm-openmp  # [osx]
     - make
-    - openmp  # [linux]
-    - openmpi
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -33,6 +30,7 @@ requirements:
     - {{ pin_compatible('libcblas') }}
     - libtool
     - llvm-openmp  # [osx]
+    - libgomp      # [linux]
     - {{ pin_compatible('ncurses') }}
     - mpi4py
     - openmp  # [linux]
