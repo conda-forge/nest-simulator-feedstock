@@ -25,6 +25,8 @@ fi
 CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
+LD_LIBRARY_PATH="${PREFIX}/lib"
+
 mkdir build
 cd build
 
@@ -38,11 +40,11 @@ if [[ $(uname) == Linux ]]; then
         -Dwith-ltdl=OFF \
         -Dwith-mpi=OFF \
         -Dwith-boost=ON \
-        -DCMAKE_CXX_COMPILER=mpic++ \
-        -DCMAKE_C_COMPILER=mpicc \
         ..
 fi
 
+# -DCMAKE_CXX_COMPILER=mpic++ \
+# -DCMAKE_C_COMPILER=mpicc \
 #    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 #        -Dwith-boost=ON \
 #        -Dwith-openmp=ON \
