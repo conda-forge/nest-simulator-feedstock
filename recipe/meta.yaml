@@ -9,11 +9,14 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 583d5725882ad5e8fd4fc7ffab425da97cbbb91fadbc327e940c184e8892b958
+  patches:
+    - nest-simulator-3.2-p1-VersionNumber.patch
+    - nest-simulator-3.2.-p2-nestrc.patch
 
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
-  skip: true  # [win or py<30 or python_impl == 'pypy']
+  skip: true  # [win or py<38 or python_impl == 'pypy']
 
 requirements:
   build:
