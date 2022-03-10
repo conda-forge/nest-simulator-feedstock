@@ -1,0 +1,13 @@
+diff --git a/sli/slistartup.cc b/sli/slistartup.cc
+index 271d4d0f6..d2dec4ae5 100644
+--- a/sli/slistartup.cc
++++ b/sli/slistartup.cc
+@@ -403,7 +403,7 @@ SLIStartup::init( SLIInterpreter* i )
+ 
+     // We cannot call i->terminate() here because the interpreter is not fully configured yet.
+     // If running PyNEST, the Python process will terminate.
+-    std::exit( EXITCODE_FATAL );
++    //std::exit( EXITCODE_FATAL );
+   }
+ 
+   i->message(
