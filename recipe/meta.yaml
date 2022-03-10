@@ -26,6 +26,7 @@ requirements:
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17   # [linux64]
   host:
     - boost
     - cython
