@@ -2,10 +2,8 @@
 
 export MPI_FLAGS=--allow-run-as-root
 
-if [[ $(uname) == Linux ]]; then
+if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
-	export CFLAGS="-I${PREFIX}/include"
-	export LDFLAGS="-L${PREFIX}/lib"
 fi
 
 if [[ ${target_platform} == osx-64 ]]; then
@@ -14,41 +12,21 @@ else
   CC=$(basename "${GCC}")
 fi
 
-if [[ $(uname) == Darwin ]] && [[ -n ${CONDA_BUILD_SYSROOT} ]]; then
-	echo 'export ${PREFIX}/bin:$PATH"' >> ~/.bash_profile
-    LDFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${LDFLAGS}
-    CPPFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CPPFLAGS}
-else
-    CXXFLAGS="${CXXFLAGS} -lrt"
-fi
-
-CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
-
 mkdir build
 cd build
 
-# Linux build
-if [[ $(uname) == Linux ]]; then
-	cmake ${CMAKE_ARGS}  -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-	      -DCMAKE_PREFIX_PATH=${CONDA_PREFIX} \
-        ..
-fi
-
-# OSX build
-if [[ $(uname) == Darwin ]]; then
-	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
         -Dwith-openmp=ON \
         -Dwith-python=ON \
         -DPYTHON_EXECUTABLE=${PYTHON}\
-        -DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PY_VER}.dylib \
+        -DPython3_FIND_STRATEGY:STRING=LOCATION \
+        -DPython3_ROOT_DIR:PATH=${PREFIX} \
         -Dwith-gsl=${PREFIX} \
         -DREADLINE_ROOT_DIR=${PREFIX} \
         -DLTDL_ROOT_DIR=${PREFIX} \
 ..
-fi
 
 make -j${CPU_COUNT}
 make install
