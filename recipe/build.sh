@@ -30,18 +30,10 @@ cd build
 
 # Linux build
 if [[ $(uname) == Linux ]]; then
-	cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-..
+	cmake ${CMAKE_ARGS}  -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+	      -DCMAKE_PREFIX_PATH=${CONDA_PREFIX} \
+        ..
 fi
-
-#    cmake -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
-#        -Dwith-boost=ON \
-#        -Dwith-openmp=ON \
-#        -Dwith-python=ON \
-#        -Dwith-gsl=ON ${PREFIX} \
-#        -Dwith-readline=ON ${PREFIX} \
-#        -Dwith-ltdl=ON ${PREFIX} \
-
 
 # OSX build
 if [[ $(uname) == Darwin ]]; then
