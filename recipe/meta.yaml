@@ -20,19 +20,18 @@ requirements:
     - cmake >=3.12
     - llvm-openmp  # [osx]
     - make
-    - openmp  # [linux]
+    - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - boost
     - cython
     - gsl
-    - {{ pin_compatible('libcblas') }}
+    - libcblas
+    - liblapack
     - libtool
-    - llvm-openmp  # [osx]
-    - {{ pin_compatible('ncurses') }}
+    - ncurses
     - mpi4py
-    - openmp  # [linux]
     - python
     - readline
     - scipy
@@ -43,20 +42,15 @@ requirements:
     - boost
     - cython
     - gsl
-    - {{ pin_compatible('libcblas') }}
     - libtool
-    - llvm-openmp  # [osx]
     - matplotlib-base
-    - {{ pin_compatible('ncurses') }}
     - mpi4py
-    - openmp  # [linux]
     - python
     - python.app  # [osx]
     - readline
     - scipy
     - statsmodels
     - openssh
-    - zlib
 
 test:
   imports:
