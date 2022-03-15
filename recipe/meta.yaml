@@ -11,7 +11,6 @@ source:
   sha256: 583d5725882ad5e8fd4fc7ffab425da97cbbb91fadbc327e940c184e8892b958
   patches:
     - nest-simulator-3.2-p1-VersionNumber.patch
-    - nest-simulator-3.2.-p2-nestrc.patch
 
 build:
   number: {{ build }}
