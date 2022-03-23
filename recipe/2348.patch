@@ -1,0 +1,239 @@
+From 9416943a430a3950b0ae36a2a5b303e13d41289e Mon Sep 17 00:00:00 2001
+From: Hans Ekkehard Plesser <hans.ekkehard.plesser@nmbu.no>
+Date: Fri, 18 Mar 2022 09:30:56 +0100
+Subject: [PATCH 1/6] Fix problems with Conda path substitutions in binaries.
+
+---
+ nestkernel/dynamicloader.cpp | 8 +++++++-
+ sli/slistartup.cc            | 5 ++++-
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/nestkernel/dynamicloader.cpp b/nestkernel/dynamicloader.cpp
+index c239d13417..5e92956f73 100644
+--- a/nestkernel/dynamicloader.cpp
++++ b/nestkernel/dynamicloader.cpp
+@@ -270,7 +270,13 @@ DynamicLoaderModule::init( SLIInterpreter* i )
+     LOG( M_ERROR, "DynamicLoaderModule::init", "Could not initialize libltdl. No dynamic modules will be available." );
+   }
+ 
+-  if ( lt_dladdsearchdir( NEST_INSTALL_PREFIX "/" NEST_INSTALL_LIBDIR ) )
++  // To avoid problems due to string substitution in NEST binaries during
++  // Conda installation, we need to convert the literal to string to be able to see it as
++  // a c_str; converting that to string again will limit at the first 0-byte in the cstr.
++  // We then need to convert back to c_str since lt_dladdsearchdir needs that.
++  // see #2237 and https://github.com/conda/conda-build/issues/1674#issuecomment-280378336
++  const std::string module_dir = std::string( std::string( NEST_INSTALL_PREFIX ).c_str() ) + "/" + NEST_INSTALL_LIBDIR;
++  if ( lt_dladdsearchdir( module_dir.c_str() ) )
+   {
+     LOG( M_ERROR, "DynamicLoaderModule::init", "Could not add dynamic module search directory." );
+   }
+diff --git a/sli/slistartup.cc b/sli/slistartup.cc
+index 271d4d0f6f..d799e167b0 100644
+--- a/sli/slistartup.cc
++++ b/sli/slistartup.cc
+@@ -135,7 +135,10 @@ SLIStartup::GetenvFunction::execute( SLIInterpreter* i ) const
+ 
+ 
+ SLIStartup::SLIStartup( int argc, char** argv )
+-  : sliprefix( NEST_INSTALL_PREFIX )
++  // To avoid problems due to string substitution in NEST binaries during
++  // Conda installation, we need to convert the literal to string, cstr and back,
++  // see #2237 and https://github.com/conda/conda-build/issues/1674#issuecomment-280378336
++  : sliprefix( std::string( NEST_INSTALL_PREFIX ).c_str() )
+   , slilibdir( sliprefix + "/" + NEST_INSTALL_DATADIR )
+   , slidocdir( sliprefix + "/" + NEST_INSTALL_DOCDIR )
+   , startupfile( slilibdir + "/sli/sli-init.sli" )
+
+From 90657e38c1b2ac3ec45bb5773b3567a7802b0528 Mon Sep 17 00:00:00 2001
+From: Hans Ekkehard Plesser <hans.ekkehard.plesser@nmbu.no>
+Date: Mon, 21 Mar 2022 09:03:24 +0100
+Subject: [PATCH 2/6] Simplify string composition.
+
+Co-authored-by: Jochen Martin Eppler <jougs@gmx.net>
+---
+ nestkernel/dynamicloader.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/nestkernel/dynamicloader.cpp b/nestkernel/dynamicloader.cpp
+index 5e92956f73..b6e436a662 100644
+--- a/nestkernel/dynamicloader.cpp
++++ b/nestkernel/dynamicloader.cpp
+@@ -275,7 +275,7 @@ DynamicLoaderModule::init( SLIInterpreter* i )
+   // a c_str; converting that to string again will limit at the first 0-byte in the cstr.
+   // We then need to convert back to c_str since lt_dladdsearchdir needs that.
+   // see #2237 and https://github.com/conda/conda-build/issues/1674#issuecomment-280378336
+-  const std::string module_dir = std::string( std::string( NEST_INSTALL_PREFIX ).c_str() ) + "/" + NEST_INSTALL_LIBDIR;
++  const std::string module_dir = std::string( NEST_INSTALL_PREFIX ).c_str() + std::string( "/" NEST_INSTALL_LIBDIR );
+   if ( lt_dladdsearchdir( module_dir.c_str() ) )
+   {
+     LOG( M_ERROR, "DynamicLoaderModule::init", "Could not add dynamic module search directory." );
+
+From 9a1112cdc37aa70f1b03ce62d6bdd2b11cea0eee Mon Sep 17 00:00:00 2001
+From: Hans Ekkehard Plesser <hans.ekkehard.plesser@nmbu.no>
+Date: Mon, 21 Mar 2022 09:04:27 +0100
+Subject: [PATCH 3/6] Shortened comment.
+
+---
+ nestkernel/dynamicloader.cpp | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/nestkernel/dynamicloader.cpp b/nestkernel/dynamicloader.cpp
+index b6e436a662..009f9e2d3a 100644
+--- a/nestkernel/dynamicloader.cpp
++++ b/nestkernel/dynamicloader.cpp
+@@ -271,9 +271,7 @@ DynamicLoaderModule::init( SLIInterpreter* i )
+   }
+ 
+   // To avoid problems due to string substitution in NEST binaries during
+-  // Conda installation, we need to convert the literal to string to be able to see it as
+-  // a c_str; converting that to string again will limit at the first 0-byte in the cstr.
+-  // We then need to convert back to c_str since lt_dladdsearchdir needs that.
++  // Conda installation, we need to convert the literal to string, cstr and back,
+   // see #2237 and https://github.com/conda/conda-build/issues/1674#issuecomment-280378336
+   const std::string module_dir = std::string( NEST_INSTALL_PREFIX ).c_str() + std::string( "/" NEST_INSTALL_LIBDIR );
+   if ( lt_dladdsearchdir( module_dir.c_str() ) )
+
+From df882ddc07fd1ffbd605064aa475f067aa13651b Mon Sep 17 00:00:00 2001
+From: Hans Ekkehard Plesser <hans.ekkehard.plesser@nmbu.no>
+Date: Mon, 21 Mar 2022 09:08:10 +0100
+Subject: [PATCH 4/6] Fixed code style
+
+---
+ models/spike_generator.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/models/spike_generator.h b/models/spike_generator.h
+index 3939f24d56..e523bb12f8 100644
+--- a/models/spike_generator.h
++++ b/models/spike_generator.h
+@@ -284,7 +284,7 @@ class spike_generator : public StimulationDevice
+     //! Shift spike times at present to next step
+     bool shift_now_spikes_;
+ 
+-    Parameters_();                               //!< Sets default parameter values
++    Parameters_(); //!< Sets default parameter values
+     Parameters_( const Parameters_& ) = default;
+     Parameters_& operator=( const Parameters_& ) = default;
+ 
+
+From 05539ffdbe13affc3b8bed6de2095dffed1b4a16 Mon Sep 17 00:00:00 2001
+From: Hans Ekkehard Plesser <hans.ekkehard.plesser@nmbu.no>
+Date: Tue, 22 Mar 2022 10:00:45 +0100
+Subject: [PATCH 5/6] Force -O0 for files with Conda file substitution
+ problems.
+
+---
+ nestkernel/CMakeLists.txt |  4 ++++
+ sli/CMakeLists.txt        |  4 ++++
+ sli/slistartup.cc         | 16 ++++++++++++++++
+ 3 files changed, 24 insertions(+)
+
+diff --git a/nestkernel/CMakeLists.txt b/nestkernel/CMakeLists.txt
+index 916fd92bf2..0254573db0 100644
+--- a/nestkernel/CMakeLists.txt
++++ b/nestkernel/CMakeLists.txt
+@@ -131,6 +131,10 @@ if ( HAVE_MPI )
+ endif ()
+ 
+ 
++# Prevent problems with Conda path substitution (see #2348) 
++set_source_files_properties( dynamicloader.cpp PROPERTIES COMPILE_OPTIONS "-O0" )
++
++
+ add_library( nestkernel ${nestkernel_sources} )
+ target_link_libraries( nestkernel
+     nestutil sli_lib
+diff --git a/sli/CMakeLists.txt b/sli/CMakeLists.txt
+index 18248ee550..5bc3798db3 100644
+--- a/sli/CMakeLists.txt
++++ b/sli/CMakeLists.txt
+@@ -82,6 +82,10 @@ set( sli_sources
+     utils.cc utils.h
+     )
+ 
++
++# Prevent problems with Conda path substitution (see #2348) 
++set_source_files_properties( slistartup.cc PROPERTIES COMPILE_OPTIONS "-O0" )
++
+ add_library( sli_lib ${sli_sources} )
+ target_link_libraries( sli_lib nestutil OpenMP::OpenMP_CXX )
+ 
+diff --git a/sli/slistartup.cc b/sli/slistartup.cc
+index d799e167b0..715257d29d 100644
+--- a/sli/slistartup.cc
++++ b/sli/slistartup.cc
+@@ -133,6 +133,18 @@ SLIStartup::GetenvFunction::execute( SLIInterpreter* i ) const
+   i->EStack.pop();
+ }
+ 
++void
++disp( const std::string& s, const std::string& nm )
++{
++  std::cout << nm << "                #" << s << "#" << std::endl;
++  std::cout << nm << ".c_str()        #" << s.c_str() << "#" << std::endl;
++  for ( size_t j = 0; j < s.size(); ++j )
++    std::cout << std::setw( 4 ) << s[ j ];
++  std::cout << std::endl;
++  for ( size_t j = 0; j < s.size(); ++j )
++    std::cout << std::setw( 4 ) << int( s[ j ] );
++  std::cout << std::endl << std::endl;
++}
+ 
+ SLIStartup::SLIStartup( int argc, char** argv )
+   // To avoid problems due to string substitution in NEST binaries during
+@@ -191,6 +203,10 @@ SLIStartup::SLIStartup( int argc, char** argv )
+   , exitcode_unknownerror_name( "unknownerror" )
+   , environment_name( "environment" )
+ {
++  disp( sliprefix, std::string( "sliprefix" ) );
++  disp( slilibdir, std::string( "slilibdir" ) );
++  disp( startupfile, std::string( "startupfile" ) );
++
+   ArrayDatum args_array;
+ 
+   // argv[0] is the name of the program that was given to the shell.
+
+From 33e6035bb46bb17570aca814e590eea0c8aa2d4e Mon Sep 17 00:00:00 2001
+From: Hans Ekkehard Plesser <hans.ekkehard.plesser@nmbu.no>
+Date: Wed, 23 Mar 2022 09:04:53 +0100
+Subject: [PATCH 6/6] Remove debugging output.
+
+---
+ sli/slistartup.cc | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+diff --git a/sli/slistartup.cc b/sli/slistartup.cc
+index 715257d29d..dea5771fca 100644
+--- a/sli/slistartup.cc
++++ b/sli/slistartup.cc
+@@ -133,19 +133,6 @@ SLIStartup::GetenvFunction::execute( SLIInterpreter* i ) const
+   i->EStack.pop();
+ }
+ 
+-void
+-disp( const std::string& s, const std::string& nm )
+-{
+-  std::cout << nm << "                #" << s << "#" << std::endl;
+-  std::cout << nm << ".c_str()        #" << s.c_str() << "#" << std::endl;
+-  for ( size_t j = 0; j < s.size(); ++j )
+-    std::cout << std::setw( 4 ) << s[ j ];
+-  std::cout << std::endl;
+-  for ( size_t j = 0; j < s.size(); ++j )
+-    std::cout << std::setw( 4 ) << int( s[ j ] );
+-  std::cout << std::endl << std::endl;
+-}
+-
+ SLIStartup::SLIStartup( int argc, char** argv )
+   // To avoid problems due to string substitution in NEST binaries during
+   // Conda installation, we need to convert the literal to string, cstr and back,
+@@ -203,10 +190,6 @@ SLIStartup::SLIStartup( int argc, char** argv )
+   , exitcode_unknownerror_name( "unknownerror" )
+   , environment_name( "environment" )
+ {
+-  disp( sliprefix, std::string( "sliprefix" ) );
+-  disp( slilibdir, std::string( "slilibdir" ) );
+-  disp( startupfile, std::string( "startupfile" ) );
+-
+   ArrayDatum args_array;
+ 
+   // argv[0] is the name of the program that was given to the shell.
