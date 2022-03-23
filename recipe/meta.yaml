@@ -10,7 +10,7 @@ source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 179462b966cc61f5785d2fee770bc36f86745598ace9cd97dd620622b62043ed
   patches:
-    - 2348.patch
+    - 01-nest-simulator-v33-fix-conda.patch
 
 build:
   number: {{ build }}
@@ -25,10 +25,11 @@ requirements:
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17   # [linux64]
   host:
-    - boost
+    - boost  >=1.69
     - cython
-    - gsl
+    - gsl >=1.11
     - libcblas
     - liblapack
     - libtool
