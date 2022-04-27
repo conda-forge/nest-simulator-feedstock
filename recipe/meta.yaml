@@ -31,7 +31,7 @@ requirements:
     - sysroot_linux-64 2.17   # [linux64]
   host:
     - boost  >=1.69
-    - cython
+    - cython   # [build_platform != target_platform]
     - gsl >=1.11
     - libcblas
     - liblapack
