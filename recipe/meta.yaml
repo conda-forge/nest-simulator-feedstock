@@ -37,7 +37,6 @@ requirements:
     - liblapack
     - libtool
     - ncurses
-    - mpi4py
     - python
     - readline
     - scipy
@@ -50,7 +49,6 @@ requirements:
     - gsl
     - libtool
     - matplotlib-base
-    - mpi4py
     - python
     - python.app  # [osx]
     - readline
