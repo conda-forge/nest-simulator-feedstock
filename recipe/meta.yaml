@@ -9,9 +9,9 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 179462b966cc61f5785d2fee770bc36f86745598ace9cd97dd620622b62043ed
-  patches:
-    - 01-nest-simulator-v33-fix-cmake-conda-osx-arm64.patch
-    #- 01-nest-simulator-v33-fix-conda.patch
+  patches:    
+    - 01-nest-simulator-v33-fix-conda.patch
+    - 02-nest-simulator-v33-fix-cmake-conda-osx-arm64.patch
 
 build:
   number: {{ build }}
@@ -24,7 +24,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - cmake >=3.12
-    - llvm-openmp  # [osx or osx_64]
+    - llvm-openmp  # [osx]
     - make
     - libgomp  # [linux]
     - {{ compiler('c') }}
@@ -51,7 +51,7 @@ requirements:
     - libtool
     - matplotlib-base
     - python
-    - python.app  # [osx or osx_64]
+    - python.app  # [osx]
     - readline
     - scipy
     - statsmodels
