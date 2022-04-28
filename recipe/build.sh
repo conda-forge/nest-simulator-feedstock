@@ -15,10 +15,12 @@ fi
 mkdir build
 cd build
 
-CMAKE_PREFIX_PATH=${CONDA_PREFIX} cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
         -Dwith-openmp=ON \
+        -DOpenMP_C_FLAG=-fopenmp 
+        -DOpenMP_CXX_FLAG=-fopenmp
         -Dwith-python=ON \
         -DPYTHON_EXECUTABLE=${PYTHON} \
         -DPython_EXECUTABLE=${PYTHON} \
