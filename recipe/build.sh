@@ -13,8 +13,8 @@ else
 fi
 
 # Test cython
-sed '/^#!/d' ${PREFIX}/bin/cython
-sed '1 i\${PREFIX}\/bin\/python' ${PREFIX}/bin/cython 
+cat ${PREFIX}/bin/cython
+sed s/\#!\/usr\/bin\/python/\#!${PREFIX}\/bin\/python/g ${PREFIX}/bin/cython 
 cat ${PREFIX}/bin/cython
 
 mkdir build
