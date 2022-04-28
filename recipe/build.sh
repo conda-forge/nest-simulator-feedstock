@@ -13,7 +13,8 @@ else
 fi
 
 # Test cython
-ls -l ${CONDA_PREFIX}/bin/
+ls -l ${PREFIX}/bin/
+# ls -l ${CONDA_PREFIX}/bin/
 # cat ${CONDA_PREFIX}/bin/cython
 
 mkdir build
