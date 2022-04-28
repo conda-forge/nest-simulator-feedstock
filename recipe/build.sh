@@ -13,9 +13,9 @@ else
 fi
 
 # Test cython
+sed '/^#!/d' ${PREFIX}/bin/cython
+sed '1 i ${PREFIX}/bin/python' Textdatei 
 cat ${PREFIX}/bin/cython
-# ls -l ${CONDA_PREFIX}/bin/
-cat ${CONDA_PREFIX}/bin/cython
 
 mkdir build
 cd build
