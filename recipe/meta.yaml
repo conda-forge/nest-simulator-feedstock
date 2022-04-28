@@ -24,7 +24,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - cmake >=3.12
-    - llvm-openmp  # [osx]
+    - llvm-openmp  # [osx or build_platform != target_platform]
     - make
     - libgomp  # [linux]
     - {{ compiler('c') }}
