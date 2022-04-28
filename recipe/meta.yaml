@@ -23,7 +23,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - cmake >=3.12
-    - llvm-openmp  # [osx]
+    - llvm-openmp  # [osx or osx_64]
     - make
     - libgomp  # [linux]
     - {{ compiler('c') }}
@@ -50,7 +50,7 @@ requirements:
     - libtool
     - matplotlib-base
     - python
-    - python.app  # [osx]
+    - python.app  # [osx or osx_64]
     - readline
     - scipy
     - statsmodels
