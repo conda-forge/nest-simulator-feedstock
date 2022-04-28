@@ -14,7 +14,8 @@ fi
 
 # Test cython
 cat ${PREFIX}/bin/cython
-
+# Test env
+env
 
 mkdir build
 cd build
