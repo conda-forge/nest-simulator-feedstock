@@ -12,7 +12,9 @@ else
   CC=$(basename "${GCC}")
 fi
 
-cat ${CONDA_PREFIX}/bin/cython
+# Test cython
+ls -l ${CONDA_PREFIX}/bin/
+# cat ${CONDA_PREFIX}/bin/cython
 
 mkdir build
 cd build
