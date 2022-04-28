@@ -13,9 +13,9 @@ else
 fi
 
 # Test cython
-ls -l ${PREFIX}/bin/
+cat ${PREFIX}/bin/cython
 # ls -l ${CONDA_PREFIX}/bin/
-# cat ${CONDA_PREFIX}/bin/cython
+cat ${CONDA_PREFIX}/bin/cython
 
 mkdir build
 cd build
