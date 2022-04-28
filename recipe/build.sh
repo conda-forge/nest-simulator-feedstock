@@ -15,7 +15,7 @@ fi
 mkdir build
 cd build
 
-cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
+CMAKE_PREFIX_PATH=${CONDA_PREFIX} cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
         -Dwith-openmp=ON \
