@@ -12,6 +12,8 @@ else
   CC=$(basename "${GCC}")
 fi
 
+cat ${CONDA_PREFIX}/bin/cython
+
 mkdir build
 cd build
 
