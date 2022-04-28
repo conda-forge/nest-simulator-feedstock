@@ -1,0 +1,13 @@
+diff --git a/cmake/FindCython.cmake b/cmake/FindCython.cmake
+index c41f68fe9..7e85fbf20 100644
+--- a/cmake/FindCython.cmake
++++ b/cmake/FindCython.cmake
+@@ -40,7 +40,7 @@ endif ()
+ 
+ if ( NOT CYTHON_EXECUTABLE STREQUAL "CYTHON_EXECUTABLE-NOTFOUND" )
+   execute_process(
+-      COMMAND ${CYTHON_EXECUTABLE} --version
++      COMMAND ${Python_EXECUTABLE} ${CYTHON_EXECUTABLE} --version
+       RESULT_VARIABLE RESULT
+       OUTPUT_VARIABLE CYTHON_VAR_OUTPUT
+       ERROR_VARIABLE CYTHON_ERR_OUTPUT
