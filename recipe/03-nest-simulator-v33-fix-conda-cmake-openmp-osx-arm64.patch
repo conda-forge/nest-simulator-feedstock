@@ -1,0 +1,13 @@
+diff --git a/cmake/ProcessOptions.cmake b/cmake/ProcessOptions.cmake
+index fc4bd449d..e3926e589 100644
+--- a/cmake/ProcessOptions.cmake
++++ b/cmake/ProcessOptions.cmake
+@@ -435,7 +435,7 @@ function( NEST_PROCESS_WITH_OPENMP )
+       set( OpenMP_C_FLAGS "${with-openmp}" )
+       set( OpenMP_CXX_FLAGS "${with-openmp}" )
+     else ()
+-      find_package( OpenMP )
++      find_package( OPENMP )
+     endif ()
+     if ( OPENMP_FOUND )
+       # export found variables to parent scope

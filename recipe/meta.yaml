@@ -12,6 +12,7 @@ source:
   patches:    
     - 01-nest-simulator-v33-fix-conda.patch
     - 02-nest-simulator-v33-fix-cmake-conda-osx-arm64.patch
+    - 03-nest-simulator-v33-fix-conda-cmake-openmp-osx-arm64.patch
 
 build:
   number: {{ build }}
