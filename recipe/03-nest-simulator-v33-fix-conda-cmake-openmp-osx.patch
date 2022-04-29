@@ -1,0 +1,28 @@
+diff --git a/cmake/ProcessOptions.cmake b/cmake/ProcessOptions.cmake
+index fc4bd449d..33157afc7 100644
+--- a/cmake/ProcessOptions.cmake
++++ b/cmake/ProcessOptions.cmake
+@@ -439,12 +439,17 @@ function( NEST_PROCESS_WITH_OPENMP )
+     endif ()
+     if ( OPENMP_FOUND )
+       # export found variables to parent scope
+-      set( OPENMP_FOUND "${OPENMP_FOUND}" PARENT_SCOPE )
+-      set( OpenMP_C_FLAGS "${OpenMP_C_FLAGS}" PARENT_SCOPE )
+-      set( OpenMP_CXX_FLAGS "${OpenMP_CXX_FLAGS}" PARENT_SCOPE )
+-      # set flags
+-      set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}" PARENT_SCOPE )
+-      set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}" PARENT_SCOPE )
++      if(APPLE)
++        set(OpenMP_C_FLAGS "-Xpreprocessor -fopenmp")
++        set(OpenMP_CXX_FLAGS "-Xpreprocessor -fopenmp")
++      else()
++        set( OPENMP_FOUND "${OPENMP_FOUND}" PARENT_SCOPE )
++        set( OpenMP_C_FLAGS "${OpenMP_C_FLAGS}" PARENT_SCOPE )
++        set( OpenMP_CXX_FLAGS "${OpenMP_CXX_FLAGS}" PARENT_SCOPE )
++        # set flags
++        set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}" PARENT_SCOPE )
++        set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}" PARENT_SCOPE )
++      endif()
+     else()
+       message( FATAL_ERROR "CMake can not find OpenMP." )
+     endif ()
