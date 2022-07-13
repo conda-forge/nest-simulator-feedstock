@@ -18,7 +18,7 @@ cd build
 cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
-        -Dwith-openmp=ON \
+        -Dwith-openmp="-fopenmp=libomp" \
         -Dwith-python=ON \
         -DPYTHON_EXECUTABLE=${PYTHON} \
         -DPython_EXECUTABLE=${PYTHON} \
