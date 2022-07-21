@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - cmake >=3.12
+    - cmake >=3.18
     - llvm-openmp  # [osx]
     - make
     - libgomp  # [linux]
