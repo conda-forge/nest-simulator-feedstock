@@ -39,7 +39,7 @@ requirements:
     - libcblas
     - liblapack
     - libtool
-    - llvm-openmp  # [osx]
+    # - llvm-openmp  # [osx]
     - ncurses
     - python
     - readline
