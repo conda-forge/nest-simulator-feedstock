@@ -6,7 +6,7 @@ if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
 fi
 
-if [[ ${target_platform} == osx-64 ]]; then
+if [[ ${target_platform} == osx-* ]]; then
   CC=$(basename "${CC}")
 else
   CC=$(basename "${GCC}")
