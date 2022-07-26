@@ -12,6 +12,10 @@ else
   CC=$(basename "${GCC}")
 fi
 
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+  CROSS_ARGS="-DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT="
+fi
+
 mkdir build
 cd build
 
