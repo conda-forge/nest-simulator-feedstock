@@ -27,7 +27,6 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - cmake >=3.12
     - llvm-openmp  # [osx]
-    - openmp  # [osx]
     - make
     - libgomp  # [linux]
     - {{ compiler('c') }}
