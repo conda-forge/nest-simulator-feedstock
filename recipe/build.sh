@@ -13,7 +13,10 @@ else
 fi
 
 if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-  export CMAKE_ARGS="${CMAKE_ARGS} -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
+  export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
+  pushd pynest
+  ${PYTHON} -m cython pynestkernel.pyx --cplus
+  popd
 fi
 
 mkdir build
