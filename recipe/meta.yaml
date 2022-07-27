@@ -11,9 +11,7 @@ source:
   sha256: 179462b966cc61f5785d2fee770bc36f86745598ace9cd97dd620622b62043ed
   patches:
     - 01-nest-simulator-v33-fix-conda.patch
-    # - 02-nest-simulator-v33-fix-cmake-conda-osx-arm64.patch
-    # - 03-nest-simulator-fix-openmp.patch
-    - 04-nest-simulator-fix-cythonize.patch
+    - 02-nest-simulator-fix-cythonize.patch
 
 build:
   number: {{ build }}
