@@ -6,10 +6,17 @@ if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
 fi
 
-if [[ ${target_platform} == osx-64 ]]; then
+if [[ ${target_platform} == osx-* ]]; then
   CC=$(basename "${CC}")
 else
   CC=$(basename "${GCC}")
+fi
+
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+  export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
+  pushd pynest
+  ${PYTHON} -m cython pynestkernel.pyx --cplus
+  popd
 fi
 
 mkdir build

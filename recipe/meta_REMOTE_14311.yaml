@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "3.3" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,6 @@ requirements:
     - make
     - cmake
     - llvm-openmp  # [osx]
-    - make
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -39,7 +38,6 @@ requirements:
     - liblapack
     - libtool
     - ncurses
-    - mpi4py
     - python
     - readline
     - scipy
@@ -52,7 +50,6 @@ requirements:
     - gsl
     - libtool
     - matplotlib-base
-    - mpi4py
     - python
     - python.app  # [osx]
     - readline
