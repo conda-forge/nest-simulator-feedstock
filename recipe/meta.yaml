@@ -10,8 +10,7 @@ source:
   url: https://github.com/nest/{{ name }}/archive/refs/heads/3.4-develop.tar.gz
   sha256: add6d2340c8579ebf2c90649b32ef1e9663aba1b8e52403d8bb8dd5808a81fcb
   patches:
-    - 01-nest-simulator-v33-fix-conda.patch
-    - 02-nest-simulator-fix-cythonize.patch
+    - 01-nest-simulator-fix-cythonize.patch
 
 build:
   number: {{ build }}
