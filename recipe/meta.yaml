@@ -25,7 +25,6 @@ requirements:
     - make
     - cmake
     - llvm-openmp  # [osx]
-    - make
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
