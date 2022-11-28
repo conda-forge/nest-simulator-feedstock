@@ -1,6 +1,10 @@
 {% set name = "nest-simulator" %}
 {% set version = "3.4.develop" %}
+<<<<<<< HEAD
+{% set build = 0 %}
+=======
 {% set build = 1 %}
+>>>>>>> afc55df84229c9a4659c524f295158016017445f
 
 package:
   name: {{ name|lower }}
