@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/heads/3.4-develop.tar.gz
-  sha256: add6d2340c8579ebf2c90649b32ef1e9663aba1b8e52403d8bb8dd5808a81fcb
+  sha256: 574fca4608225315af46922a157fee96b87c813d27698825589352011f9b952c
   patches:
     - 01-nest-simulator-fix-cythonize.patch
 
