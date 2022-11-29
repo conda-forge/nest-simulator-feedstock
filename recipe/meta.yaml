@@ -43,6 +43,22 @@ requirements:
     - openssh
     - statsmodels
     - zlib
+    - PyYAML>=4.2b1
+    - assimulo
+    - breathe
+    - csvkit
+    - docutils
+    - doxygen
+    - mock
+    - nbsphinx
+    - numpydoc
+    - path.py
+    - pydot
+    - recommonmark
+    - sphinx >= 4.0.2
+    - sphinx_rtd_theme
+    - tqdm
+    - yamllint
   run:
     - boost
     - cython
