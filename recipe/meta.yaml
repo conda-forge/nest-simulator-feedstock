@@ -43,7 +43,7 @@ requirements:
     - openssh
     - statsmodels
     - zlib
-    - PyYAML>=4.2b1
+    - PyYAML >=4.2b1
     - assimulo
     - breathe
     - csvkit
@@ -55,7 +55,7 @@ requirements:
     - path.py
     - pydot
     - recommonmark
-    - sphinx >= 4.0.2
+    - sphinx >=4.0.2
     - sphinx_rtd_theme
     - tqdm
     - yamllint
