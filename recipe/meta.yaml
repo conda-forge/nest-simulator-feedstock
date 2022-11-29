@@ -37,6 +37,7 @@ requirements:
     - liblapack
     - libtool
     - ncurses
+    - pip
     - python
     - readline
     - scipy
@@ -44,7 +45,6 @@ requirements:
     - statsmodels
     - zlib
     - PyYAML >=4.2b1
-    - assimulo
     - breathe
     - csvkit
     - docutils
