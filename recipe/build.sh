@@ -20,7 +20,7 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
 fi
 
 python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade  Building NEST documentation PyYAML>=4.2b1 assimulo breathe csvkit docutils doxygen mock nbsphinx numpydoc path.py pydot recommonmark sphinx >= 4.0.2 sphinx_rtd_theme tqdm yamllint
+python3 -m pip install --upgrade PyYAML>=4.2b1 assimulo breathe csvkit docutils doxygen mock nbsphinx numpydoc path.py pydot recommonmark sphinx >= 4.0.2 sphinx_rtd_theme tqdm yamllint
 
 mkdir build
 cd build
