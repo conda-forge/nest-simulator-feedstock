@@ -35,7 +35,6 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 ..
 
 make -j${CPU_COUNT}
-make html
 make install
 
 if [[ -d ${PREFIX}/lib64 ]]
