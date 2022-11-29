@@ -32,15 +32,16 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-gsl=${PREFIX} \
         -DREADLINE_ROOT_DIR=${PREFIX} \
         -DLTDL_ROOT_DIR=${PREFIX} \
+        -DCMAKE_INSTALL_LIBDIR=lib \
 ..
 
 make -j${CPU_COUNT}
 make install
 
-if [[ -d ${PREFIX}/lib64 ]]
-then
-    cp -R ${PREFIX}/lib64/* ${PREFIX}/lib
-fi
+# if [[ -d ${PREFIX}/lib64 ]]
+# then
+#    cp -R ${PREFIX}/lib64/* ${PREFIX}/lib
+#fi
 
 for CHANGE in "activate" "deactivate"
 do
