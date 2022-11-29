@@ -48,7 +48,6 @@ requirements:
     - breathe
     - csvkit
     - docutils
-    - doxygen
     - mock
     - nbsphinx
     - numpydoc
