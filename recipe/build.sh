@@ -1,7 +1,5 @@
 #!/bin/sh
 
-OLDPWD="build"
-
 export MPI_FLAGS=--allow-run-as-root
 
 if [[ ${target_platform} == linux-* ]]; then

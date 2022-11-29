@@ -11,6 +11,7 @@ source:
   sha256: 574fca4608225315af46922a157fee96b87c813d27698825589352011f9b952c
   patches:
     - 01-nest-simulator-fix-cythonize.patch
+    - 02_doc_in_conda_env.patch
 
 build:
   number: {{ build }}
