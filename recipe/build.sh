@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo "#########################################"
+echo $CONDA_BUILD
+echo "#########################################"
 export MPI_FLAGS=--allow-run-as-root
 
 if [[ ${target_platform} == linux-* ]]; then
