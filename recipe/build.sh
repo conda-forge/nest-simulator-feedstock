@@ -24,6 +24,7 @@ cd build
 
 cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
         -Dwith-boost=ON \
+        -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
         -Dwith-openmp=ON \
         -Dwith-python=ON \
@@ -36,6 +37,7 @@ cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} \
 ..
 
 make -j${CPU_COUNT}
+make docs
 make install
 
 # if [[ -d ${PREFIX}/lib64 ]]
