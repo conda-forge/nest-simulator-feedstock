@@ -49,6 +49,7 @@ requirements:
     - cxx-compiler
     - make
     - cmake
+    - perl
     - zlib
     - boost
     - cython
