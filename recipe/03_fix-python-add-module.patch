@@ -1,8 +1,18 @@
 diff --git a/pynest/CMakeLists.txt b/pynest/CMakeLists.txt
-index 1815f7870..722d98fc6 100644
+index 1815f7870..5e7408a45 100644
 --- a/pynest/CMakeLists.txt
 +++ b/pynest/CMakeLists.txt
-@@ -44,7 +44,7 @@ if ( HAVE_PYTHON )
+@@ -18,7 +18,8 @@
+ # along with NEST.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ if ( HAVE_PYTHON )
+-
++  FIND_PACKAGE(PythonInterp 3)
++  FIND_PACKAGE(PythonLibs 3)
+   if ( CYTHON_FOUND )
+     include( UseCython )
+     set_source_files_properties(
+@@ -44,7 +45,7 @@ if ( HAVE_PYTHON )
            "    cythonize pynestkernel.pyx\n"
            "And copy the file `pynestkernel.cpp` into ${CMAKE_CURRENT_SOURCE_DIR}/pynest ." )
      endif ()
