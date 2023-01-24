@@ -9,7 +9,8 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 62558bf545abd5a54e92abd4ce8afaa58b45fe1065e6f47a7da723cd85a7e013
-  # patches:
+  patches:
+    - 03_fix-python-add-module.patch
   #   - 01-nest-simulator-v33-fix-conda.patch
   #   - 02-nest-simulator-fix-cythonize.patch
 
