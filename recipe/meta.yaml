@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 179462b966cc61f5785d2fee770bc36f86745598ace9cd97dd620622b62043ed
+  sha256: 62558bf545abd5a54e92abd4ce8afaa58b45fe1065e6f47a7da723cd85a7e013
   # patches:
   #   - 01-nest-simulator-v33-fix-conda.patch
   #   - 02-nest-simulator-fix-cythonize.patch
