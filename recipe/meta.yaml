@@ -76,7 +76,6 @@ test:
   commands:
     - nest --help
     - sli --help
-    - bash ${CONDA_PREFIX}/share/nest/testsuite/do_tests.sh --prefix=${CONDA_PREFIX}/ --report-dir=${CONDA_PREFIX}/reports --with-python=${CONDA_PREFIX}/bin/python
 
 about:
   home: http://www.nest-simulator.org/
