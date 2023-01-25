@@ -59,11 +59,24 @@ requirements:
     - openssh
 
 test:
+  requires:
+    - junitparser
+    - pytest
+    - pytest-timeout
+    - pytest-xdist
+    - numpy
+    - pandas
+    - scipy
+    - mpi4py
+    - terminaltables
+    - pycodestyle
+    - cppcheck
   imports:
     - nest
   commands:
     - nest --help
     - sli --help
+    - bash ${PREFIX}/share/nest/testsuite/do_tests.sh --prefix=${PREFIX}/ --report-dir=${PREFIX}/reports --with-python=${PREFIX}/bin/python
 
 about:
   home: http://www.nest-simulator.org/
