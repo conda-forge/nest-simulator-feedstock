@@ -1,9 +1,12 @@
 #!/bin/bash
+
 . "${CONDA_PREFIX}/bin/nest_vars.sh"
 
-COMPILER_FULL=$("${CONDA_PREFIX}"/bin/nest-config --compiler)
+COMPILER_FULL=$(nest-config --compiler)
 COMPILER_NAME=$(basename "${COMPILER_FULL}")
-COMPILER_RUN=$(which c++)
+COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
+
+# COMPILER_RUN=$(which c++)
 
 if [[ ${OSTYPE} == 'linux'* ]]; then
   sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
@@ -17,3 +20,5 @@ if [[ ${OSTYPE} == 'darwin'* ]]; then
   sed "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
   cat "${CONDA_PREFIX}"/bin/nest-config
 fi
+
+
