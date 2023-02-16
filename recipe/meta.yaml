@@ -60,6 +60,7 @@ requirements:
     - python.app  # [osx]
     - readline
     - scipy
+    - sed
     - statsmodels
     - openssh
 
