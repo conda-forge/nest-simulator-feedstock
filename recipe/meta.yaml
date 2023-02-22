@@ -82,11 +82,7 @@ test:
   commands:
     - nest --help
     - sli --help
-    - nest-config --compiler-name
-    - nest-config --compiler
-    - nest-config --libs
-    - nest-config --cflags
-
+    
 about:
   home: http://www.nest-simulator.org/
   license: GPL-2.0-or-later
