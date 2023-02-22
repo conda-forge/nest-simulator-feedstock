@@ -1,7 +1,7 @@
 #!/bin/bash
 . "${CONDA_PREFIX}/bin/nest_vars.sh"
-
-COMPILER_FULL=$(nest-config --compiler)
+ls "${CONDA_PREFIX}"/bin
+COMPILER_FULL=$("${CONDA_PREFIX}"/bin/nest-config --compiler)
 COMPILER_NAME=$(basename "${COMPILER_FULL}")
 COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
 
