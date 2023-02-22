@@ -3,33 +3,10 @@
 
 cat "$CONDA_PREFIX"/bin/nest-config
 
-env
-
-
-assert_var() {
-   if [[ -z ${!1+x} ]]; then
-      echo '!!!!NOT EXISTS!'
-      echo $1
-   else
-      echo '!!!!EXISTS!'
-      echo $1
-   fi
-}
-
-assert_var "PREFIX"
-
-
-
-
-#Source: https://stackoverflow.com/questions/62678246
-
-
-
-
-COMPILER_FULL=$(nest-config --compiler)
+COMPILER_FULL=$(bash nest-config --compiler)
 #COMPILER_NAME=$(basename "${COMPILER_FULL}")
 #COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
-COMPILER_RUN=$(which cc)
+COMPILER_RUN=$(bash which cc)
 
 # sed "s|$COMPILER_FULL|$COMPILER_RUN|g" "$CONDA_PREFIX"/bin/nest-config
 
