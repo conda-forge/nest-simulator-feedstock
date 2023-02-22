@@ -4,9 +4,9 @@
 cat "$CONDA_PREFIX"/bin/nest-config
 
 COMPILER_FULL=$(bash nest-config --compiler)
-#COMPILER_NAME=$(basename "${COMPILER_FULL}")
-#COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
-COMPILER_RUN=$(bash which cc)
+COMPILER_NAME=$(basename "${COMPILER_FULL}")
+COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
+#COMPILER_RUN=$(bash which cc)
 
 # sed "s|$COMPILER_FULL|$COMPILER_RUN|g" "$CONDA_PREFIX"/bin/nest-config
 
