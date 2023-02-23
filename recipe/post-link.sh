@@ -3,9 +3,9 @@
 . "${CONDA_PREFIX}/bin/nest_vars.sh"
 
 COMPILER_FULL=$(bash nest-config --compiler)
-COMPILER_NAME=$(basename "${COMPILER_FULL}")
+COMPILER_NAME=$(basename "${GCC}")
 #COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
-COMPILER_RUN=$(which cc)
+COMPILER_RUN=$(which ${GCC})
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   echo "COMPILER LINUX BUILD" >> $PREFIX/.messages.txt
