@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.3" %}
-{% set build = 3 %}
+{% set version = "3.4" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 179462b966cc61f5785d2fee770bc36f86745598ace9cd97dd620622b62043ed
+  sha256: c56699111f899045ba48e55e87d14eca8763b48ebbb3648beee701a36aa3af20
   patches:
     - 01-nest-simulator-v33-fix-conda.patch
     - 02-nest-simulator-fix-cythonize.patch
