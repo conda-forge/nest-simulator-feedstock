@@ -20,6 +20,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   mv "${CONDA_PREFIX}"/bin/nest-config-tmp-2 "${CONDA_PREFIX}"/bin/nest-config
   echo "COMPILER DARWIN RUN"
   bash nest-config --compiler
+  cat "${CONDA_PREFIX}"/bin/nest-config
 else
   echo "$OSTYPE"
 fi
