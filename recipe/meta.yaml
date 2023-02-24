@@ -10,8 +10,7 @@ source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: c56699111f899045ba48e55e87d14eca8763b48ebbb3648beee701a36aa3af20
   patches:
-    - 01-nest-simulator-v33-fix-conda.patch
-    - 02-nest-simulator-fix-cythonize.patch
+    - 03_fix-python-add-module.patch
 
 build:
   number: {{ build }}
@@ -45,6 +44,11 @@ requirements:
     - statsmodels
     - zlib
   run:
+    - c-compiler
+    - cxx-compiler
+    - make
+    - cmake
+    - zlib
     - boost
     - cython
     - gsl
@@ -54,10 +58,23 @@ requirements:
     - python.app  # [osx]
     - readline
     - scipy
+    - sed
     - statsmodels
     - openssh
 
 test:
+  requires:
+    - junitparser
+    - pytest
+    - pytest-timeout
+    - pytest-xdist
+    - numpy
+    - pandas
+    - scipy
+    - mpi4py
+    - terminaltables
+    - pycodestyle
+    - cppcheck
   imports:
     - nest
   commands:
