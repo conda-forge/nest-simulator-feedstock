@@ -7,9 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/nicolossus/nest-simulator.git
-  git_tag: nestsonata
-  git_depth: 1
+  path: nest-simulator-nestsonata.tar.xz
   patches:
     - 03_fix-python-add-module.patch
 
