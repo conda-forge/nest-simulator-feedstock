@@ -7,9 +7,10 @@ package:
   version: {{ version }}
 
 source:
-  path: nest-simulator.tar.xz
-  # patches:
-  #  - 03_fix-python-add-module.patch
+  url: https://github.com/nicolossus/nest-simulator/archive/refs/heads/nestsonata.tar.gz
+  sha256: 8c2b2d046529d91e6cf1dae9e9d103d1647fe304dfe2a0ee819ecf44981edde0
+  patches:
+    - 03_fix-python-add-module.patch
 
 build:
   number: {{ build }}
