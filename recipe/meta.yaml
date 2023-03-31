@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  path: nest-simulator-nestsonata.tar.xz
+  path: ../nest-simulator-nestsonata.tar.xz
   patches:
     - 03_fix-python-add-module.patch
 
