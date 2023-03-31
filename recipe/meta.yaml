@@ -7,8 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: c56699111f899045ba48e55e87d14eca8763b48ebbb3648beee701a36aa3af20
+  git_url: https://github.com/nicolossus/nest-simulator.git
+  git_tag: nestsonata
+  git_depth: 1
+  #url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
+  #sha256: c56699111f899045ba48e55e87d14eca8763b48ebbb3648beee701a36aa3af20
   patches:
     - 03_fix-python-add-module.patch
 
@@ -33,6 +36,7 @@ requirements:
     - boost
     - cython
     - gsl >=1.11
+    - hdf5
     - libcblas
     - liblapack
     - libtool
@@ -46,6 +50,7 @@ requirements:
   run:
     - c-compiler
     - cxx-compiler
+    - hdf5
     - make
     - cmake
     - zlib
@@ -68,6 +73,7 @@ test:
     - pytest
     - pytest-timeout
     - pytest-xdist
+    - hdf5
     - numpy
     - pandas
     - scipy
