@@ -8,8 +8,8 @@ package:
 
 source:
   path: nest-simulator.tar.xz
-  patches:
-    - 03_fix-python-add-module.patch
+  # patches:
+  #  - 03_fix-python-add-module.patch
 
 build:
   number: {{ build }}
