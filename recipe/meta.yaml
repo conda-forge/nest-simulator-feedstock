@@ -44,7 +44,6 @@ requirements:
     - openssh
     - statsmodels
     - zlib
-    - pycodestyle >=2.9
   run:
     - c-compiler
     - cxx-compiler
@@ -64,7 +63,6 @@ requirements:
     - sed
     - statsmodels
     - openssh
-    - pycodestyle >=2.9
 
 test:
   requires:
