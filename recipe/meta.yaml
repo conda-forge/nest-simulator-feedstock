@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nicolossus/nest-simulator/archive/refs/heads/nestsonata.tar.gz
-  sha256: 8c2b2d046529d91e6cf1dae9e9d103d1647fe304dfe2a0ee819ecf44981edde0
+  sha256: 95e81aadcbdbf5b96622a72678d76e64a93db619b17dff1e74bbcb798831f374
   patches:
     - 03_fix-python-add-module.patch
 
