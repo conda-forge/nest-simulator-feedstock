@@ -29,6 +29,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17   # [linux64]
+    - pycodestyle >=2.9
   host:
     - boost
     - cython
@@ -44,6 +45,7 @@ requirements:
     - openssh
     - statsmodels
     - zlib
+    - pycodestyle >=2.9
   run:
     - c-compiler
     - cxx-compiler
@@ -63,6 +65,7 @@ requirements:
     - sed
     - statsmodels
     - openssh
+    - pycodestyle >=2.9
 
 test:
   requires:
@@ -76,7 +79,7 @@ test:
     - scipy
     - mpi4py
     - terminaltables
-    - pycodestyle
+    - pycodestyle >=2.9
     - cppcheck
   imports:
     - nest
