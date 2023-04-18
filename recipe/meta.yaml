@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "sonatatest" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 package:
   name: {{ name|lower }}
@@ -76,7 +76,7 @@ test:
     - scipy
     - mpi4py
     - terminaltables
-    - pycodestyle >=2.9
+    - pycodestyle
     - cppcheck
   imports:
     - nest
