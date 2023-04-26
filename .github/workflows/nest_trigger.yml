@@ -7,15 +7,19 @@ on:
       commit_hash:
         required: true
         type: string
+
+env:
+  PR_REF: ${{ github.ref }}
         
 jobs:
   testbuild:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: "checkout"
         uses: actions/checkout@v2
       - name: "replace"
         run: |
+          echo $PR_REF
           ls
           cat meta.yaml
           set 
