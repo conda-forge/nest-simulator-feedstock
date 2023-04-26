@@ -2,7 +2,6 @@ name: API Triggered Workflow
 
 on:
  workflow_dispatch:
-    types: [on-demand-test]
 
 jobs:
   build:
