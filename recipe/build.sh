@@ -27,6 +27,7 @@ cmake "${CMAKE_ARGS}" -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
         -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
         -Dwith-openmp=ON \
         -Dwith-python=ON \
+        -Dwith-hdf5=ON \
         -DPYTHON_EXECUTABLE="${PYTHON}" \
         -DPython_EXECUTABLE="${PYTHON}" \
         -Dwith-gsl="${PREFIX}" \
