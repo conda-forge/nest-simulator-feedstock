@@ -5,7 +5,7 @@ boost:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -13,19 +13,23 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '15'
 gsl:
 - '2.7'
+hdf5:
+- 1.12.2
 libcblas:
 - 3.9 *netlib
 liblapack:
 - 3.9 *netlib
 llvm_openmp:
-- '14'
+- '15'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:
 - '6'
+numpy:
+- '1.21'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -33,7 +37,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.8.* *_cpython
 python_impl:
 - cpython
 readline:
@@ -44,6 +48,7 @@ zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
 - - python
+  - numpy
   - python_impl
 zlib:
 - '1.2'
