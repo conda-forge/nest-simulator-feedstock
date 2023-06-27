@@ -19,9 +19,8 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
   popd || return
 fi
 
-mkdir build
-cd build || exit
-
+mkdir ../build
+pushd build || exit
 cmake "${CMAKE_ARGS}" -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
         -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
@@ -33,7 +32,7 @@ cmake "${CMAKE_ARGS}" -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
         -Dwith-gsl="${PREFIX}" \
         -DREADLINE_ROOT_DIR="${PREFIX}" \
         -DLTDL_ROOT_DIR="${PREFIX}" \
-..
+${SRC_DIR}
 
 make -j"${CPU_COUNT}"
 make install
