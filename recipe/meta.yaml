@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/nest/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: 0ccc520ff642be4a30c0606150a397e6137362a2acf76ea03a8ee2aa48803a3e
   # patches:
     # - 03_fix-python-add-module.patch
