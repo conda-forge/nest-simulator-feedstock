@@ -20,7 +20,7 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
 fi
 
 mkdir ../build
-pushd build || exit
+pushd ../build || exit
 cmake "${CMAKE_ARGS}" -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
         -Dwith-boost=ON \
         -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
