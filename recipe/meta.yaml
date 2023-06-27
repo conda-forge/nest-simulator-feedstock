@@ -28,7 +28,7 @@ requirements:
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17   # [linux64]
+    - sysroot_linux-64 2.17  # [linux64]
   host:
     - boost
     - cython
@@ -84,7 +84,7 @@ test:
     - pycodestyle
     - pydocstyle
     - rstcheck
-    - mypy[version='>=0.8']
+    - mypy
     - cppcheck
   imports:
     - nest
