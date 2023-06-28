@@ -30,12 +30,14 @@ CXXFLAGS="${CXXFLAGS} -lrt"
 
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
-# if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-#   export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
-#   pushd pynest || return
-#   ${PYTHON} -m cython pynestkernel.pyx --cplus
-#   popd || return
-# fi
+if [[ ${target_platform} == osx-* ]]; then
+  if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+    export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
+    pushd pynest || return
+    ${PYTHON} -m cython pynestkernel.pyx --cplus
+    popd || return
+  fi
+fi
 
 mkdir ../build
 pushd ../build || exit
