@@ -16,6 +16,8 @@ cxx_compiler_version:
 - '15'
 gsl:
 - '2.7'
+hdf5:
+- 1.12.2
 libcblas:
 - 3.9 *netlib
 liblapack:
