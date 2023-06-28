@@ -1,5 +1,5 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.5_rc1" %}
+{% set version = "3.4" %}
 {% set build = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0ccc520ff642be4a30c0606150a397e6137362a2acf76ea03a8ee2aa48803a3e
+  sha256: conda smithy rerender -c auto
   #patches:
     #- 03_fix-python-add-module.patch
 
