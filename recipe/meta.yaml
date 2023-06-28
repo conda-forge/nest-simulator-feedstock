@@ -33,7 +33,7 @@ requirements:
     - boost
     - cython
     - gsl >=1.11
-    - hdf5
+    - hdf5==1.12.2
     - h5py
     - libcblas
     - liblapack
