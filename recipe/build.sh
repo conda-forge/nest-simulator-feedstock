@@ -2,14 +2,12 @@
 
 export MPI_FLAGS=--allow-run-as-root
 
-export CXXFLAGS="-Wno-c++11-narrowing"
-
 if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
 fi
 
 if [[ $(uname) == Linux ]]; then
-    export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
+  export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
 	export CFLAGS="-I${PREFIX}/include"
 	export LDFLAGS="-L${PREFIX}/lib"
 fi
@@ -23,16 +21,14 @@ fi
 if [[ $(uname) == Darwin ]] && [[ -n ${CONDA_BUILD_SYSROOT} ]]; then
 	echo 'export ${PREFIX}/bin:$PATH"' >> ~/.bash_profile
 	CFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CFLAGS}
-    LDFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${LDFLAGS}
-    CPPFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CPPFLAGS}
+  LDFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${LDFLAGS}
+  CPPFLAGS="-isysroot ${CONDA_BUILD_SYSROOT} "${CPPFLAGS}
 fi
 
 CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
 CXXFLAGS="${CXXFLAGS} -lrt"
 
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
-
-
 
 # if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
 #   export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
@@ -43,7 +39,17 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
 mkdir ../build
 pushd ../build || exit
-cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" ${SRC_DIR}
+cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
+      -Dwith-boost=ON \
+      -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
+      -Dwith-openmp=ON \
+      -Dwith-python=ON \
+      -Dwith-hdf5=ON \
+      -DPYTHON_EXECUTABLE="${PYTHON}" \
+      -Dwith-gsl="${PREFIX}" \
+      -DREADLINE_ROOT_DIR="${PREFIX}" \
+      -DLTDL_ROOT_DIR="${PREFIX}" \
+${SRC_DIR}
 
 make -j"${CPU_COUNT}"
 make install
