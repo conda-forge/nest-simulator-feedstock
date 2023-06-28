@@ -21,15 +21,7 @@ fi
 
 mkdir ../build
 pushd ../build || exit
-cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
-      -Dwith-openmp=ON \
-      -Dwith-python=ON \
-      -Dwith-hdf5=ON \
-      -DPYTHON_EXECUTABLE="${PYTHON}" \
-      -Dwith-gsl="${PREFIX}" \
-      -DREADLINE_ROOT_DIR="${PREFIX}" \
-      -DLTDL_ROOT_DIR="${PREFIX}" \
-${SRC_DIR}
+cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" ${SRC_DIR}
 
 make -j"${CPU_COUNT}"
 make install
