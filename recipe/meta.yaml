@@ -9,8 +9,8 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 0ccc520ff642be4a30c0606150a397e6137362a2acf76ea03a8ee2aa48803a3e
-  #patches:
-    #- 03_fix-python-add-module.patch
+  # patches:
+  #  - 03_fix-python-add-module.patch
 
 build:
   number: {{ build }}
@@ -28,11 +28,13 @@ requirements:
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17   # [linux64]
+    #- sysroot_linux-64 2.17   # [linux64]
   host:
     - boost
     - cython
     - gsl >=1.11
+    - hdf5
+    - h5py
     - libcblas
     - liblapack
     - libtool
@@ -61,6 +63,8 @@ requirements:
     - sed
     - statsmodels
     - openssh
+    - hdf5
+    - h5py
 
 test:
   requires:
