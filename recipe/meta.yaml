@@ -63,7 +63,7 @@ requirements:
     - sed
     - statsmodels
     - openssh
-    - hdf5
+    - hdf5==1.12.2
     - h5py
 
 test:
