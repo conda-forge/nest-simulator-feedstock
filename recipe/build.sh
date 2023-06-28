@@ -24,10 +24,6 @@ pushd ../build || exit
 cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
       -Dwith-boost=ON \
       -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
-      -Dwith-openmp=ON \
-      -Dwith-python=ON \
-      -Dwith-hdf5=ON \
-      -DPYTHON_EXECUTABLE="${PYTHON}" \
 ${SRC_DIR}
 
 make -j"${CPU_COUNT}"
