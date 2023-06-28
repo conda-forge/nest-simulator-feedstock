@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: conda smithy rerender -c auto
+  sha256: c56699111f899045ba48e55e87d14eca8763b48ebbb3648beee701a36aa3af20
   #patches:
     #- 03_fix-python-add-module.patch
 
