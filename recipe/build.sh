@@ -31,6 +31,7 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
       -Dwith-python=ON \
       -Dwith-hdf5=ON \
       -DPYTHON_EXECUTABLE="${PYTHON}" \
+      -DPython3_EXECUTABLE="${PYTHON}" \
       -Dwith-gsl="${PREFIX}" \
       -DREADLINE_ROOT_DIR="${PREFIX}" \
       -DLTDL_ROOT_DIR="${PREFIX}" \
