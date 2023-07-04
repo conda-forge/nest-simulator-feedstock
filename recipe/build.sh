@@ -4,6 +4,9 @@ export MPI_FLAGS=--allow-run-as-root
 
 if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
+  CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
+  CXXFLAGS="${CXXFLAGS} -lrt"
+  export CPPFLAGS CXXFLAGS
 fi
 
 if [[ ${target_platform} == osx-* ]]; then
