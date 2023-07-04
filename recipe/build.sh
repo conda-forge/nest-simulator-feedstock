@@ -4,8 +4,6 @@ export MPI_FLAGS=--allow-run-as-root
 
 if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
-  export CFLAGS="-I${PREFIX}/include"
-	export LDFLAGS="-L${PREFIX}/lib"
 fi
 
 if [[ ${target_platform} == osx-* ]]; then
@@ -13,11 +11,6 @@ if [[ ${target_platform} == osx-* ]]; then
 else
   CC=$(basename "${GCC}")
 fi
-
-CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-CXXFLAGS="${CXXFLAGS} -lrt"
-
-export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
 
 # if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
@@ -28,7 +21,7 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 # fi
 
 mkdir build
-cd build || exit
+pushd build || exit
 
 cmake "${CMAKE_ARGS}" -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
         -Dwith-boost=ON \
@@ -37,7 +30,6 @@ cmake "${CMAKE_ARGS}" -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
         -Dwith-python=ON \
         -Dwith-hdf5=ON \
         -DPYTHON_EXECUTABLE="${PYTHON}" \
-        -DPython_EXECUTABLE="${PYTHON}" \
         -Dwith-gsl="${PREFIX}" \
         -DREADLINE_ROOT_DIR="${PREFIX}" \
         -DLTDL_ROOT_DIR="${PREFIX}" \
