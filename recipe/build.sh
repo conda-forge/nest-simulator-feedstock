@@ -34,6 +34,8 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
       -Dwith-gsl="${PREFIX}" \
       -DREADLINE_ROOT_DIR="${PREFIX}" \
       -DLTDL_ROOT_DIR="${PREFIX}" \
+      -DCMAKE_FIND_FRAMEWORK=NEVER \
+      -DCMAKE_FIND_APPBUNDLE=NEVER \
 ${SRC_DIR}
 
 make -j"${CPU_COUNT}"
