@@ -28,11 +28,13 @@ requirements:
     - libgomp  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17   # [linux64]
+    # - sysroot_linux-64 2.17   # [linux64]
   host:
     - boost
     - cython
     - gsl >=1.11
+    - hdf5
+    - h5py
     - libcblas
     - liblapack
     - libtool
@@ -61,6 +63,8 @@ requirements:
     - sed
     - statsmodels
     - openssh
+    - hdf5
+    - h5py
 
 test:
   requires:
