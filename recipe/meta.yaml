@@ -46,10 +46,6 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - c-compiler
-    - cxx-compiler
-    - make
-    - cmake
     - zlib
     - cython
     - gsl
