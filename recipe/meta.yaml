@@ -53,6 +53,8 @@ requirements:
     - readline
     - scipy
     - statsmodels
+    - hdf5
+    - h5py
 
 test:
   requires:
