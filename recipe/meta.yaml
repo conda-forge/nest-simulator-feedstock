@@ -46,19 +46,13 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - zlib
-    - cython
     - gsl
     - libtool
-    - matplotlib-base
     - python
     - python.app  # [osx]
     - readline
     - scipy
-    - sed
     - statsmodels
-    - hdf5
-    - h5py
 
 test:
   requires:
