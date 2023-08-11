@@ -51,7 +51,6 @@ requirements:
     - make
     - cmake
     - zlib
-    - boost
     - cython
     - gsl
     - libtool
@@ -62,7 +61,6 @@ requirements:
     - scipy
     - sed
     - statsmodels
-    - openssh
     - hdf5
     - h5py
 
