@@ -55,7 +55,6 @@ requirements:
     - statsmodels
     - hdf5
     - h5py
-
 test:
   requires:
     - pytest
