@@ -79,7 +79,7 @@ test:
   imports:
     - nest
   commands:
-    - python -c "import nest; "
+    - python -c "import nest; nest.help();"
     - nest --help
     - sli --help
 
