@@ -47,14 +47,16 @@ requirements:
     - zlib
   run:
     - gsl
+    - hdf5
+    - h5py
     - libtool
     - python
     - python.app  # [osx]
-    - readline
+    - python_abi
+    # - readline # comes with python
     - scipy
     - statsmodels
-    - hdf5
-    - h5py
+
 test:
   requires:
     - pytest
