@@ -79,8 +79,9 @@ test:
     - pycodestyle
     - cppcheck
   imports:
-    - nest
+    - nest 
   commands:
+    - nest-config --libs
     - nest --help
     - sli --help
 
