@@ -19,3 +19,6 @@ azure:
   # limit the amount of CI jobs running concurrently at a given time
   # each OS will get its proportional share of the configured value
   max_parallel: 25
+build_with_mambabuild:
+  True
+
