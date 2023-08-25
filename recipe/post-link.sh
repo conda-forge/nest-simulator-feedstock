@@ -18,12 +18,12 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   bash nest-config --compiler >> "${PREFIX}"/.messages.txt  
   sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
   sed -i "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
-  echo "TEST PERMISSIONS"
-  ls -tal "${CONDA_PREFIX}"/bin/
-  echo "TEST PERMISSIONS END"
   echo "COMPILER DARWIN RUN" >> "${PREFIX}"/.messages.txt
   bash nest-config --compiler >> "${PREFIX}"/.messages.txt
   cat "${CONDA_PREFIX}"/bin/nest-config >> "${PREFIX}"/.messages.txt
+  echo "TEST PERMISSIONS"
+  ls -tal "${CONDA_PREFIX}"/bin/
+  echo "TEST PERMISSIONS END"
 else
   echo "$OSTYPE" >> "${PREFIX}"/.messages.txt
 fi
