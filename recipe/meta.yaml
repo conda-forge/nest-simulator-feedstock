@@ -1,6 +1,7 @@
 {% set name = "nest-simulator" %}
 {% set version = "3.5" %}
-{% set build = 1 %}
+{% set build = 2 %}
+
 
 package:
   name: {{ name|lower }}
@@ -9,8 +10,6 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 3cdf5720854a4d8a7d359f9de9d2fb3619a0be2e36932028d6940360741547bd
-  #patches:
-    #- 03_fix-python-add-module.patch
 
 build:
   number: {{ build }}
@@ -80,8 +79,9 @@ test:
     - pycodestyle
     - cppcheck
   imports:
-    - nest
+    - nest 
   commands:
+    - nest-config --libs
     - nest --help
     - sli --help
 
