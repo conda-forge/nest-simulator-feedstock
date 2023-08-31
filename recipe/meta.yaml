@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  path: ../nest-simulator
+  path: /home/runner/work/nest-simulator/nest-simulator
   
 build:
   number: {{ build }}
