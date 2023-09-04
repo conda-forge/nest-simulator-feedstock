@@ -8,7 +8,9 @@ package:
   version: {{ version }}
 
 source:
-  path: /home/runner/work/nest-simulator/nest-simulator
+  git_url: https://github.com/nest/nest-simulator.git
+  git_rev: master
+  git_depth: 1
   
 build:
   number: {{ build }}
