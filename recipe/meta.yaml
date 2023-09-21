@@ -1,5 +1,5 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.5" %}
+{% set version = "3.6_rc1" %}
 {% set build = 0 %}
 
 package:
@@ -7,10 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3cdf5720854a4d8a7d359f9de9d2fb3619a0be2e36932028d6940360741547bd
-  #patches:
-    #- 03_fix-python-add-module.patch
+  url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 8a8693933180bd5f64e0032c175997bbe7ee3bc6b0d73a7a4a394c97fc93969d
 
 build:
   number: {{ build }}
