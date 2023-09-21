@@ -75,7 +75,7 @@ test:
     - mypy >=0.8
     - cppcheck
   imports:
-    - nest
+    - nest 
   commands:
     - python -c "import nest; nest.help();"
     - nest --help
