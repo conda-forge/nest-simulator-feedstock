@@ -1,5 +1,5 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.6_rc2" %}
+{% set version = "3.6-rc2" %}
 {% set build = 0 %}
 
 package:
