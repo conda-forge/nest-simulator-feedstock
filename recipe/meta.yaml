@@ -1,15 +1,14 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.5" %}
-{% set build = 2 %}
-
+{% set version = "3.6" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/nest/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 3cdf5720854a4d8a7d359f9de9d2fb3619a0be2e36932028d6940360741547bd
+  url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 68d6b11791e1284dc94fef35d84c08dd7a11322c0f1e1fc9b39c5e6882284922
 
 build:
   number: {{ build }}
@@ -45,43 +44,40 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - c-compiler
-    - cxx-compiler
-    - make
-    - cmake
-    - zlib
-    - boost
-    - cython
     - gsl
-    - libtool
-    - matplotlib-base
-    - python
-    - python.app  # [osx]
-    - readline
-    - scipy
-    - sed
-    - statsmodels
-    - openssh
     - hdf5
     - h5py
+    - libtool
+    - python
+    - python.app  # [osx]
+    - python_abi
+    - scipy
+    - statsmodels
 
 test:
   requires:
-    - junitparser
     - pytest
     - pytest-timeout
     - pytest-xdist
+    - pytest-pylint
+    - pytest-mypy
+    - pytest-cov
     - numpy
     - pandas
     - scipy
     - mpi4py
+    - data-science-types
+    - h5py
     - terminaltables
     - pycodestyle
+    - pydocstyle
+    - rstcheck
+    - mypy >=0.8
     - cppcheck
   imports:
     - nest 
   commands:
-    - nest-config --libs
+    - python -c "import nest; nest.help();"
     - nest --help
     - sli --help
 
