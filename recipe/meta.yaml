@@ -44,6 +44,7 @@ requirements:
     - statsmodels
     - zlib
   run:
+    - boost
     - gsl
     - hdf5
     - h5py
