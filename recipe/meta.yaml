@@ -45,13 +45,18 @@ requirements:
     - zlib
   run:
     - boost
+    - cmake
     - gsl
     - hdf5
     - h5py
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
     - libtool
+    - openmpi
     - python
     - python.app  # [osx]
     - python_abi
+    - readline
     - scipy
     - statsmodels
 
