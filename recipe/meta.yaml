@@ -45,6 +45,7 @@ requirements:
     - zlib
   run:
     - boost
+    - cmake
     - gsl
     - hdf5
     - h5py
