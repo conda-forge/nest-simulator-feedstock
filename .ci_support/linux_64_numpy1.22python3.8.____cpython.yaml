@@ -19,7 +19,7 @@ docker_image:
 gsl:
 - '2.7'
 hdf5:
-- 1.12.2
+- 1.14.2
 libcblas:
 - 3.9 *netlib
 liblapack:
