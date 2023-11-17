@@ -10,5 +10,5 @@ conda_build:
 azure:
   store_build_artifacts: True
 build_with_mambabuild:
-  True
+  False
 
