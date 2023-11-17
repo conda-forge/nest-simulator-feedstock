@@ -43,6 +43,11 @@ requirements:
     - openssh
     - statsmodels
     - zlib
+    - pytest
+    - pytest-timeout
+    - pytest-xdist
+    - junitparser
+
   run:
     - gsl
     - hdf5
