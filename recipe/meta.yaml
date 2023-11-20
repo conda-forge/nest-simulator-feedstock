@@ -83,7 +83,7 @@ test:
   imports:
     - nest 
   commands:
-    - print(nest.rng_type, nest.rng_seed)
+    - python -c "import nest; print(nest.rng_type, nest.rng_seed);"
     - python -c "import nest; nest.help();"
     - nest --help
     - sli --help
