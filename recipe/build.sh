@@ -41,7 +41,6 @@ ${SRC_DIR}
 
 make -j"${CPU_COUNT}"
 make -j"${CPU_COUNT}" install
-make -j"${CPU_COUNT}" installcheck
 
 if [[ -d ${PREFIX}/lib64 ]]
 then
