@@ -28,11 +28,11 @@ requirements:
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17   # [linux64]
   host:
-    - boost
     - cython
     - gsl >=1.11
     - hdf5
     - h5py
+    - libboost-python-devel
     - libcblas
     - liblapack
     - libtool
@@ -44,7 +44,6 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - boost
     - cmake
     - gsl
     - hdf5
