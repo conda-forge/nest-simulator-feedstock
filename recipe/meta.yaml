@@ -67,6 +67,7 @@ test:
     - pytest-pylint
     - pytest-mypy
     - pytest-cov
+    - junitparser
     - numpy
     - pandas
     - scipy
