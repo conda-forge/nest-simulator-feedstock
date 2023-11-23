@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "3.6" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: {{ name|lower }}
@@ -28,11 +28,11 @@ requirements:
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17   # [linux64]
   host:
-    - boost
     - cython
     - gsl >=1.11
     - hdf5
     - h5py
+    - libboost-headers
     - libcblas
     - liblapack
     - libtool
@@ -43,19 +43,19 @@ requirements:
     - openssh
     - statsmodels
     - zlib
-    - pytest
-    - pytest-timeout
-    - pytest-xdist
-    - junitparser
-
   run:
+    - cmake
     - gsl
     - hdf5
     - h5py
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
     - libtool
+    - openmpi
     - python
     - python.app  # [osx]
     - python_abi
+    - readline
     - scipy
     - statsmodels
 
@@ -67,7 +67,6 @@ test:
     - pytest-pylint
     - pytest-mypy
     - pytest-cov
-    - junitparser
     - numpy
     - pandas
     - scipy
@@ -83,7 +82,6 @@ test:
   imports:
     - nest 
   commands:
-    - python -c "import nest; print(nest.rng_types);"
     - python -c "import nest; nest.help();"
     - nest --help
     - sli --help
