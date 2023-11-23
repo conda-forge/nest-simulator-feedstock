@@ -1,3 +1,5 @@
+build_platform:
+  osx_arm64: osx_arm64
 conda_forge_output_validation: true
 github:
   branch_name: main
@@ -11,4 +13,3 @@ provider:
   linux_64: azure
   osx_64: azure
 conda_build_tool: mambabuild
-
