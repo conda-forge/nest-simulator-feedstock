@@ -44,6 +44,7 @@ requirements:
     - statsmodels
     - zlib
   run:
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
     - cmake
     - gsl
     - hdf5
