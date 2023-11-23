@@ -86,6 +86,7 @@ test:
     - nest 
   commands:
     - python -c "import nest; nest.help();"
+    - python -c "import nest; print(nest.rng_types);"
     - nest --help
     - sli --help
 

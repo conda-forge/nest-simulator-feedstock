@@ -22,22 +22,22 @@ fi
 #   popd || return
 # fi
 
+CMAKE_ARGS="-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} -Dwith-boost=ON \ 
+    -DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT} \
+    -Dwith-openmp=ON \
+    -Dwith-python=ON \
+    -Dwith-hdf5=ON \
+    -DPYTHON_EXECUTABLE=${PYTHON} \
+    -DPython3_EXECUTABLE=${PYTHON} \
+    -Dwith-gsl=${PREFIX} \
+    -DREADLINE_ROOT_DIR=${PREFIX} \
+    -DLTDL_ROOT_DIR=${PREFIX} \
+    -DCMAKE_FIND_FRAMEWORK=NEVER \
+    -DCMAKE_FIND_APPBUNDLE=NEVER"
+
 mkdir ../build
 pushd ../build || exit
-cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
-      -Dwith-boost=ON \
-      -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
-      -Dwith-openmp=ON \
-      -Dwith-python=ON \
-      -Dwith-hdf5=ON \
-      -DPYTHON_EXECUTABLE="${PYTHON}" \
-      -DPython3_EXECUTABLE="${PYTHON}" \
-      -Dwith-gsl="${PREFIX}" \
-      -DREADLINE_ROOT_DIR="${PREFIX}" \
-      -DLTDL_ROOT_DIR="${PREFIX}" \
-      -DCMAKE_FIND_FRAMEWORK=NEVER \
-      -DCMAKE_FIND_APPBUNDLE=NEVER \
-${SRC_DIR}
+cmake ${CMAKE_ARGS} ${SRC_DIR}
 
 make -j"${CPU_COUNT}"
 make -j"${CPU_COUNT}" install
