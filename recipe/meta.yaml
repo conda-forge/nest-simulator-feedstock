@@ -17,11 +17,10 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - python
+    - cython
+    - numpy
+    - pybind11
     - make
     - cmake
     - llvm-openmp  # [osx]
@@ -46,7 +45,6 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("11.0") }}  # [osx and x86_64]
     - cmake
     - gsl
     - hdf5
