@@ -6,7 +6,7 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
-test: test_on_native_only
+test: native_and_emulated
 azure:
   store_build_artifacts: True
 provider:
