@@ -28,12 +28,12 @@ CMAKE_ARGS="-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} -Dwith-boost=ON \
     -DCMAKE_FIND_FRAMEWORK=NEVER \
     -DCMAKE_FIND_APPBUNDLE=NEVER"
 
-# if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-#    export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
-#    pushd pynest || return
-#    ${PYTHON} -m cython pynestkernel.pyx --cplus
-#    popd || return
-# fi
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+   export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
+   pushd pynest || return
+   ${PYTHON} -m cython pynestkernel.pyx --cplus
+   popd || return
+fi
 
 mkdir ../build
 pushd ../build || exit
