@@ -9,7 +9,8 @@ package:
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 68d6b11791e1284dc94fef35d84c08dd7a11322c0f1e1fc9b39c5e6882284922
-
+  patches:
+    - 01_remove_random_test.patch
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
