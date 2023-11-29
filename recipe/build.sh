@@ -11,6 +11,14 @@ fi
 
 if [[ ${target_platform} == osx-* ]]; then
   CC=$(basename "${CC}")
+  # if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
+    #    echo "CONDA_BUILD_CROSS_COMPILATION changes"
+    #    export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
+    #    pushd pynest || return
+    #    ${PYTHON} -m cython pynestkernel.pyx --cplus
+    #    popd || return
+  # fi
+
 else
   CC=$(basename "${GCC}")
 fi
@@ -27,14 +35,6 @@ CMAKE_ARGS="-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX} -Dwith-boost=ON \
     -DLTDL_ROOT_DIR=${PREFIX} \
     -DCMAKE_FIND_FRAMEWORK=NEVER \
     -DCMAKE_FIND_APPBUNDLE=NEVER"
-
-# if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-#    echo "CONDA_BUILD_CROSS_COMPILATION changes"
-#    export CMAKE_ARGS="${CMAKE_ARGS} -Dcythonize-pynest=OFF -DRUN_RESULT=0 -DRUN_RESULT__TRYRUN_OUTPUT:STRING="""
-#    pushd pynest || return
-#    ${PYTHON} -m cython pynestkernel.pyx --cplus
-#    popd || return
-# fi
 
 mkdir ../build
 pushd ../build || exit
