@@ -8,21 +8,22 @@ COMPILER_NAME=$(basename "${CXX}")
 COMPILER_RUN=$(which "${COMPILER_NAME}")
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  echo "COMPILER LINUX BUILD" >> "${PREFIX}"/.messages.txt
-  bash nest-config --compiler >> "${PREFIX}"/.messages.txt
+  # echo "COMPILER LINUX BUILD" >> "${PREFIX}"/.messages.txt
+  #bash nest-config --compiler >> "${PREFIX}"/.messages.txt
   sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
-  echo "COMPILER LINUX RUN" >> "${PREFIX}"/.messages.txt
-  bash nest-config --compiler >> "${PREFIX}"/.messages.txt
+  # echo "COMPILER LINUX RUN" >> "${PREFIX}"/.messages.txt
+  # bash nest-config --compiler >> "${PREFIX}"/.messages.txt
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  echo "COMPILER DARWIN BUILD" >> "${PREFIX}"/.messages.txt
-  bash nest-config --compiler >> "${PREFIX}"/.messages.txt  
+  # echo "COMPILER DARWIN BUILD" >> "${PREFIX}"/.messages.txt
+  # bash nest-config --compiler >> "${PREFIX}"/.messages.txt  
   sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
   sed -i "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
-  echo "COMPILER DARWIN RUN" >> "${PREFIX}"/.messages.txt
-  bash nest-config --compiler >> "${PREFIX}"/.messages.txt
-  cat "${CONDA_PREFIX}"/bin/nest-config >> "${PREFIX}"/.messages.txt
+  # echo "COMPILER DARWIN RUN" >> "${PREFIX}"/.messages.txt
+  # bash nest-config --compiler >> "${PREFIX}"/.messages.txt
+  # cat "${CONDA_PREFIX}"/bin/nest-config >> "${PREFIX}"/.messages.txt
 else
-  echo "$OSTYPE" >> "${PREFIX}"/.messages.txt
+  # echo "$OSTYPE" >> "${PREFIX}"/.messages.txt
+  echo $OSTYPE
 fi
 
 
