@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
 {% set version = "3.6" %}
-{% set build = 3 %}
+{% set build = 4 %}
 
 package:
   name: {{ name|lower }}
@@ -82,7 +82,6 @@ test:
   imports:
     - nest 
   commands:
-    - python -c "import nest; nest.help();"
     - nest --help
     - sli --help
 

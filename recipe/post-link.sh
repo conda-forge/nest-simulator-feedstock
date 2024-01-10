@@ -4,12 +4,12 @@
 
 COMPILER_FULL=$(bash nest-config --compiler)
 COMPILER_NAME=$(basename "${CXX}")
-#COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
+# COMPILER_RUN="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
 COMPILER_RUN=$(which "${COMPILER_NAME}")
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # echo "COMPILER LINUX BUILD" >> "${PREFIX}"/.messages.txt
-  #bash nest-config --compiler >> "${PREFIX}"/.messages.txt
+  # bash nest-config --compiler >> "${PREFIX}"/.messages.txt
   sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
   # echo "COMPILER LINUX RUN" >> "${PREFIX}"/.messages.txt
   # bash nest-config --compiler >> "${PREFIX}"/.messages.txt
