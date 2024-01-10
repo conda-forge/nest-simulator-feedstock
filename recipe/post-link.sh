@@ -16,8 +16,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # echo "COMPILER DARWIN BUILD" >> "${PREFIX}"/.messages.txt
   # bash nest-config --compiler >> "${PREFIX}"/.messages.txt  
-  sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
-  sed -i "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
+  cat "${CONDA_PREFIX}"/bin/nest-config | sed "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
+  cat "${CONDA_PREFIX}"/bin/nest-config | sed "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
   # echo "COMPILER DARWIN RUN" >> "${PREFIX}"/.messages.txt
   # bash nest-config --compiler >> "${PREFIX}"/.messages.txt
   # cat "${CONDA_PREFIX}"/bin/nest-config >> "${PREFIX}"/.messages.txt
@@ -25,5 +25,3 @@ else
   # echo "$OSTYPE" >> "${PREFIX}"/.messages.txt
   echo $OSTYPE
 fi
-
-
