@@ -46,9 +46,3 @@ if [[ -d ${PREFIX}/lib64 ]]
 then
     cp -R "${PREFIX}"/lib64/* "${PREFIX}"/lib
 fi
-
-for CHANGE in "activate" "deactivate"
-do
-    mkdir -p "${PREFIX}/etc/conda/${CHANGE}.d"
-    sed "s#!!!SP_DIR!!!#${SP_DIR}#g" "${RECIPE_DIR}/${CHANGE}.sh" > "${PREFIX}/etc/conda/${CHANGE}.d/${PKG_NAME}_${CHANGE}.sh"
-done
