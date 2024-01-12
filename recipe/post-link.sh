@@ -9,6 +9,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   cat "${CONDA_PREFIX}"/bin/nest-config | sed "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
   cat "${CONDA_PREFIX}"/bin/nest-config | sed "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
+  cat "${CONDA_PREFIX}"/bin/nest-config | sed "s|${COMPILER_FULL}|${CONDA_PREFIX}/bin/clang++|g" "${CONDA_PREFIX}"/bin/nest-config
 else
   echo $OSTYPE
 fi
