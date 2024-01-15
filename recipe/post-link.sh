@@ -6,8 +6,10 @@ COMPILER_RUN=$(which "${COMPILER_NAME}")
 
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config.orig
   sed -i "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+  cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config.orig
   sed -i'sy' "s|${COMPILER_FULL}|${COMPILER_RUN}|g" "${CONDA_PREFIX}"/bin/nest-config
   sed -i'sy' "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
 else
