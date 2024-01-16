@@ -1,31 +1,28 @@
 #!/bin/bash
 
+now=$(date +"%b%d-%Y-%H%M%S")
+
 COMPILER_FULL=$(bash nest-config --compiler)
 COMPILER_NAME=$(basename "${CXX}")
-#COMPILER_RUN=$(which "${COMPILER_NAME}")
 COMPILER="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
 
 # To use nest with nestml in linux install
-#     mamba install gcc_impl_linux-64 gcc_linux-64
-#     mamba install gxx_impl_linux-64 gxx_linux-64
+#     mamba install -c conda-forge gcc_impl_linux-64 gcc_linux-64 \
+#           gxx_impl_linux-64 gxx_linux-64
 #
 # To use nest with nestml in osx-64 install
-#     mamba install clang clang-16 clang_impl_osx-64 clang_osx-64 
-#     mamba install clangxx clangxx_impl_osx-64 clangxx_osx-64
+#     mamba install -c conda-forge clang clang-16 clang_impl_osx-64 \
+#           clang_osx-64 clangxx clangxx_impl_osx-64 clangxx_osx-64
 #
 # To use nest with nestml in osx-arm64 install
-#     mamba install clang clang-16 clang_impl_osx-arm64 clang_osx-arm64
-#     mamba install clangxx clangxx_impl_osx-arm64 clangxx_osx-arm64
-
-
-
-BLD_PATH=${dirname "${COMPILER_FULL}"}
+#     mamba install -c conda-forge clang clang-16 clang_impl_osx-arm64 \
+#           clang_osx-arm64 clangxx clangxx_impl_osx-arm64 clangxx_osx-arm64
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config.orig
+  cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config-"${now}".orig
   sed -i "s|${COMPILER_FULL}|${COMPILER}|g" "${CONDA_PREFIX}"/bin/nest-config
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config.orig
+  cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config-"${now}".orig
   sed -i'.bac' "s|${COMPILER_FULL}|${COMPILER}|g" "${CONDA_PREFIX}"/bin/nest-config
   sed -i'.bac' "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
 else
