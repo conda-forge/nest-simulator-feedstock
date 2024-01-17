@@ -3,9 +3,10 @@
 now=$(date +"%b%d-%Y-%H%M%S")
 
 COMPILER_FULL=$(bash nest-config --compiler)
-COMPILER_NAME=$(basename "${CXX}")
+COMPILER_NAME=$(basename "${COMPILER_FULL}")
 COMPILER="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
 
+# Install the same compiler then on build time.env list
 # To use nest with nestml in linux install
 #     mamba install -c conda-forge gcc_impl_linux-64 gcc_linux-64 gxx_impl_linux-64 gxx_linux-64
 #
