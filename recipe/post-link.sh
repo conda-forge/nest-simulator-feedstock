@@ -16,7 +16,7 @@ COMPILER="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
 # To use nest with nestml in osx-arm64 install
 #     mamba install -c conda-forge clangxx_osx-arm64
 #
-# Update `nest-config.sh` with `.nest-simulator-post-link.sh`
+# Update `nest-config.sh` with `bash .nest-simulator-post-link.sh`
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config-"${now}".orig
