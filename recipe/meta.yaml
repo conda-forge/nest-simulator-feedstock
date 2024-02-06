@@ -1,17 +1,15 @@
 {% set name = "nest-simulator" %}
-{% set version = "devel" %}
-{% set build = 0 %}
-
+{% set version = "3.6" %}
+{% set build = 4 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/nest/nest-simulator.git
-  git_rev: master
-  git_depth: 1
-  
+  url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 68d6b11791e1284dc94fef35d84c08dd7a11322c0f1e1fc9b39c5e6882284922
+
 build:
   number: {{ build }}
   string: py{{ py }}h{{ PKG_HASH }}_{{ build }}
@@ -30,11 +28,11 @@ requirements:
     - {{ compiler('cxx') }}
     - sysroot_linux-64 2.17   # [linux64]
   host:
-    - boost
     - cython
     - gsl >=1.11
     - hdf5
     - h5py
+    - libboost-headers
     - libcblas
     - liblapack
     - libtool
@@ -46,43 +44,44 @@ requirements:
     - statsmodels
     - zlib
   run:
-    - c-compiler
-    - cxx-compiler
-    - make
     - cmake
-    - zlib
-    - boost
-    - cython
     - gsl
-    - libtool
-    - matplotlib-base
-    - python
-    - python.app  # [osx]
-    - readline
-    - scipy
-    - sed
-    - statsmodels
-    - openssh
     - hdf5
     - h5py
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
+    - libtool
+    - openmpi
+    - python
+    - python.app  # [osx]
+    - python_abi
+    - readline
+    - scipy
+    - statsmodels
 
 test:
   requires:
-    - junitparser
     - pytest
     - pytest-timeout
     - pytest-xdist
+    - pytest-pylint
+    - pytest-mypy
+    - pytest-cov
     - numpy
     - pandas
     - scipy
     - mpi4py
+    - data-science-types
+    - h5py
     - terminaltables
     - pycodestyle
+    - pydocstyle
+    - rstcheck
+    - mypy >=0.8
     - cppcheck
   imports:
     - nest 
   commands:
-    - nest-config --libs
     - nest --help
     - sli --help
 
