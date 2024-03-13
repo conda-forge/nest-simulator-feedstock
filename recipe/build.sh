@@ -5,7 +5,7 @@ export MPI_FLAGS=--allow-run-as-root
 if [[ ${target_platform} == linux-* ]]; then
   export MPI_FLAGS="$MPI_FLAGS;-mca;plm;isolated"
   CPPFLAGS="${CPPFLAGS} -I${PREFIX}/include"
-  CXXFLAGS="${CXXFLAGS} -O2 -lrt"
+  CXXFLAGS="${CXXFLAGS} -lrt"
   export CPPFLAGS CXXFLAGS
 fi
 
@@ -25,6 +25,7 @@ fi
 mkdir ../build
 pushd ../build || exit
 cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
+      -Dwith-optimize="-O2" \
       -Dwith-boost=ON \
       -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
       -Dwith-openmp=ON \
