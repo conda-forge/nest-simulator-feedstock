@@ -1,5 +1,5 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.7_rc1" %}
+{% set version = "3.7" %}
 {% set build = 1 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6f5948ac717d4b66c84ed53ba5c9b0e44e4e9cc3c1f3d15d8d8f21024313061e
+  sha256: e1fb8dc4724887a3a2bfbaa9e86f2ef1d458a4535f8c54e328c4dcb3bc426d40
           
 build:
   number: {{ build }}
