@@ -21,12 +21,12 @@ COMPILER="${CONDA_PREFIX}/bin/${COMPILER_NAME}"
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config-"${now}".orig
   sed -i "s|${COMPILER_FULL}|${COMPILER}|g" "${CONDA_PREFIX}"/bin/nest-config
-  sed -E -i "s|\/home.*\/_build_env\/|${CONDA_PREFIX}|g" "${CONDA_PREFIX}"/bin/nest-config
+  sed -E -i "s|\/home.*\/_build_env|${CONDA_PREFIX}|g" "${CONDA_PREFIX}"/bin/nest-config
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   cp "${CONDA_PREFIX}"/bin/nest-config "${CONDA_PREFIX}"/bin/nest-config-"${now}".orig
   sed -i'.bac' "s|${COMPILER_FULL}|${COMPILER}|g" "${CONDA_PREFIX}"/bin/nest-config
   sed -i'.bac' "s|-fopenmp=libomp|-Xclang -fopenmp|g" "${CONDA_PREFIX}"/bin/nest-config
-  sed -E -i'.bac' "s|\/home.*\/_build_env\/|${CONDA_PREFIX}|g" "${CONDA_PREFIX}"/bin/nest-config
+  sed -E -i'.bac' "s|\/home.*\/_build_env|${CONDA_PREFIX}|g" "${CONDA_PREFIX}"/bin/nest-config
 else
   echo $OSTYPE
 fi
