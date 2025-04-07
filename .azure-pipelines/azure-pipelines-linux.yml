@@ -8,56 +8,31 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_hdf51.14.3numpy1.22python3.10.____cpython:
-        CONFIG: linux_64_hdf51.14.3numpy1.22python3.10.____cpython
+      linux_64_numpy1.22python3.10.____cpython:
+        CONFIG: linux_64_numpy1.22python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.3numpy1.22python3_h1081ead26b
-      linux_64_hdf51.14.3numpy1.22python3.9.____cpython:
-        CONFIG: linux_64_hdf51.14.3numpy1.22python3.9.____cpython
+        SHORT_CONFIG: linux_64_numpy1.22python3.10.____cpython
+      linux_64_numpy1.22python3.9.____cpython:
+        CONFIG: linux_64_numpy1.22python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.3numpy1.22python3_h68c2eb09a5
-      linux_64_hdf51.14.3numpy1.23python3.11.____cpython:
-        CONFIG: linux_64_hdf51.14.3numpy1.23python3.11.____cpython
+        SHORT_CONFIG: linux_64_numpy1.22python3.9.____cpython
+      linux_64_numpy1.23python3.11.____cpython:
+        CONFIG: linux_64_numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.3numpy1.23python3_h7fa6478c38
-      linux_64_hdf51.14.3numpy1.26python3.12.____cpython:
-        CONFIG: linux_64_hdf51.14.3numpy1.26python3.12.____cpython
+        SHORT_CONFIG: linux_64_numpy1.23python3.11.____cpython
+      linux_64_numpy1.26python3.12.____cpython:
+        CONFIG: linux_64_numpy1.26python3.12.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.3numpy1.26python3_he478557666
-      linux_64_hdf51.14.3numpy2python3.13.____cp313:
-        CONFIG: linux_64_hdf51.14.3numpy2python3.13.____cp313
+        SHORT_CONFIG: linux_64_numpy1.26python3.12.____cpython
+      linux_64_numpy2python3.13.____cp313:
+        CONFIG: linux_64_numpy2python3.13.____cp313
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.3numpy2python3.13.____cp313
-      linux_64_hdf51.14.4numpy1.22python3.10.____cpython:
-        CONFIG: linux_64_hdf51.14.4numpy1.22python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.4numpy1.22python3_h2ce3014a40
-      linux_64_hdf51.14.4numpy1.22python3.9.____cpython:
-        CONFIG: linux_64_hdf51.14.4numpy1.22python3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.4numpy1.22python3_h068577184d
-      linux_64_hdf51.14.4numpy1.23python3.11.____cpython:
-        CONFIG: linux_64_hdf51.14.4numpy1.23python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.4numpy1.23python3_haf2aebaf7c
-      linux_64_hdf51.14.4numpy1.26python3.12.____cpython:
-        CONFIG: linux_64_hdf51.14.4numpy1.26python3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.4numpy1.26python3_hb6c383cee0
-      linux_64_hdf51.14.4numpy2python3.13.____cp313:
-        CONFIG: linux_64_hdf51.14.4numpy2python3.13.____cp313
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
-        SHORT_CONFIG: linux_64_hdf51.14.4numpy2python3.13.____cp313
+        SHORT_CONFIG: linux_64_numpy2python3.13.____cp313
   timeoutInMinutes: 360
   variables: {}
 
