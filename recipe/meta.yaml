@@ -19,7 +19,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython <3.1.0                         # [build_platform != target_platform]
     - make
     - cmake
     - llvm-openmp  # [osx]
@@ -29,7 +29,7 @@ requirements:
     - {{ stdlib("c") }}
 
   host:
-    - cython
+    - cython <3.1.0  
     - gsl >=1.11
     - hdf5
     - h5py
