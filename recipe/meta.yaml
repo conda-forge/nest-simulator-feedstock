@@ -29,11 +29,15 @@ requirements:
     - {{ stdlib("c") }}
 
   host:
-    - cython <3.1.0
+    - cython <3.1.0  
     - gsl >=1.11
     - hdf5
     - h5py
-    - libboost-headers
+    - libboost 
+    - libboost-devel 
+    - libboost-headers 
+    - libboost-python 
+    - libboost-python-devel
     - libcblas
     - liblapack
     - libtool
@@ -49,6 +53,11 @@ requirements:
     - gsl
     - hdf5
     - h5py
+    - libboost 
+    - libboost-devel 
+    - libboost-headers 
+    - libboost-python 
+    - libboost-python-devel
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
     - libtool
