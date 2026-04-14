@@ -33,7 +33,6 @@ requirements:
     - gsl >=1.11
     - hdf5
     - h5py
-    - libboost 
     - libboost-devel
     - libboost-headers
     - libboost-python-devel
