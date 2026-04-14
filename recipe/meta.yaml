@@ -34,9 +34,8 @@ requirements:
     - hdf5
     - h5py
     - libboost 
-    - libboost-devel 
-    - libboost-headers 
-    - libboost-python 
+    - libboost-devel
+    - libboost-headers
     - libboost-python-devel
     - libcblas
     - liblapack
@@ -53,11 +52,6 @@ requirements:
     - gsl
     - hdf5
     - h5py
-    - libboost 
-    - libboost-devel 
-    - libboost-headers 
-    - libboost-python 
-    - libboost-python-devel
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
     - libtool
