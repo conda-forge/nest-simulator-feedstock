@@ -42,8 +42,6 @@ python:
 - 3.14.* *_cp314
 python_impl:
 - cpython
-readline:
-- '8'
 target_platform:
 - linux-64
 zip_keys:
