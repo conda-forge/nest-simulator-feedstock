@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.9" %}
-{% set build = 2 %}
+{% set version = "3.10_rc1" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 8e67b9dcb72b029f24f3d70ff6d3dd64776dc21bf3e458c822c862677d67d076
+  sha256: 93a217ea59b16a8be33776e0f6acb941919500d1d42a91efd8f1669d05f4533c
 
 build:
   number: {{ build }}
@@ -41,7 +41,6 @@ requirements:
     - libtool
     - ncurses
     - python
-    - readline
     - scipy
     - openssh
     - statsmodels
@@ -58,7 +57,6 @@ requirements:
     - python
     - python.app  # [osx]
     - python_abi
-    - readline
     - scipy
     - statsmodels
 
@@ -84,9 +82,7 @@ test:
     - cppcheck
   imports:
     - nest
-  commands:
-    - nest --help
-    - sli --help
+
 
 about:
   home: http://www.nest-simulator.org/
@@ -112,7 +108,7 @@ about:
     measuring and stimulation) found in an experiment. These devices write their data either to memory or to file.
     NEST is extensible and new models for neurons, synapses, and devices can be added. To get started with NEST,
     please see the documentation page <https://nest-simulator.org/documentation/>.
-  doc_url: https://nest-simulator.readthedocs.io/en/latest/
+  doc_url: https://nest-simulator.readthedocs.io/en/v3.10/
   dev_url: https://github.com/nest/nest-simulator
 
 extra:

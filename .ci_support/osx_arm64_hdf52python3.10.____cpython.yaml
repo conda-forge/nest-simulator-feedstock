@@ -48,8 +48,6 @@ python:
 - 3.10.* *_cpython
 python_impl:
 - cpython
-readline:
-- '8'
 target_platform:
 - osx-arm64
 zip_keys:
