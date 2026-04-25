@@ -1,7 +1,7 @@
 About nest-simulator-feedstock
 ==============================
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/add-v3.10-feedstock/blob/main/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nest-simulator-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.nest-simulator.org/
 
@@ -13,7 +13,7 @@ systems rather than on the exact morphology of individual neurons.
 
 Development: https://github.com/nest/nest-simulator
 
-Documentation: https://nest-simulator.readthedocs.io/en/latest/
+Documentation: https://nest-simulator.readthedocs.io/en/v3.10/
 
 You can use NEST either as a for the interpreted programming language Python (PyNEST) or as a stand alone
 application (nest). PyNEST provides a set of commands to the Python interpreter which give you access to NEST's
@@ -43,8 +43,8 @@ Current build status
     <td>
       <details>
         <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main">
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main">
           </a>
         </summary>
         <table>
@@ -52,211 +52,211 @@ Current build status
           <tbody><tr>
               <td>linux_64_hdf51.14.6python3.10.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.10.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf51.14.6python3.11.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf51.14.6python3.12.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.12.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf51.14.6python3.13.____cp313</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.13.____cp313" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf51.14.6python3.14.____cp314</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.14.____cp314" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf51.14.6python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf52python3.10.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.10.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf52python3.11.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf52python3.12.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.12.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf52python3.13.____cp313</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.13.____cp313" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>linux_64_hdf52python3.14.____cp314</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.14.____cp314" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_hdf52python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf51.14.6python3.10.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.10.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf51.14.6python3.11.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf51.14.6python3.12.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.12.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf51.14.6python3.13.____cp313</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.13.____cp313" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf51.14.6python3.14.____cp314</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.14.____cp314" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf51.14.6python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf52python3.10.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.10.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf52python3.11.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf52python3.12.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.12.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf52python3.13.____cp313</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.13.____cp313" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64_hdf52python3.14.____cp314</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.14.____cp314" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_hdf52python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf51.14.6python3.10.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.10.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf51.14.6python3.11.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf51.14.6python3.12.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.12.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf51.14.6python3.13.____cp313</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.13.____cp313" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf51.14.6python3.14.____cp314</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.14.____cp314" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf51.14.6python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf52python3.10.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.10.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf52python3.11.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.11.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf52python3.12.____cpython</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.12.____cpython" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf52python3.13.____cp313</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.13.____cp313" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_arm64_hdf52python3.14.____cp314</td>
               <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/add-v3.10-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.14.____cp314" alt="variant">
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6582&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nest-simulator-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_hdf52python3.14.____cp314" alt="variant">
                 </a>
               </td>
             </tr>
