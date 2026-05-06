@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 93a217ea59b16a8be33776e0f6acb941919500d1d42a91efd8f1669d05f4533c
+  sha256: acd3898b0880406d4278570dcdd4a2c923513f0ec010c22af927e2a46a16609d
 
 build:
   number: {{ build }}
