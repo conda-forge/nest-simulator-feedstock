@@ -48,7 +48,7 @@ requirements:
   run:
     - cmake
     - gsl
-    - hdf5
+    - hdf5 <2
     - h5py
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
