@@ -31,7 +31,8 @@ requirements:
   host:
     - cython <3.1.0  
     - gsl >=1.11
-    - hdf5
+    - hdf5 >=1.10,<1.15  # [osx]
+    - hdf5 >=1.14       # [linux]
     - h5py
     - libboost-devel
     - libboost-headers
@@ -48,7 +49,7 @@ requirements:
   run:
     - cmake
     - gsl
-    - hdf5 <2
+    - hdf5
     - h5py
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
