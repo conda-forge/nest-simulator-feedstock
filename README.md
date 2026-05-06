@@ -13,7 +13,7 @@ systems rather than on the exact morphology of individual neurons.
 
 Development: https://github.com/nest/nest-simulator
 
-Documentation: https://nest-simulator.readthedocs.io/en/latest/
+Documentation: https://nest-simulator.readthedocs.io/en/v3.10/
 
 You can use NEST either as a for the interpreted programming language Python (PyNEST) or as a stand alone
 application (nest). PyNEST provides a set of commands to the Python interpreter which give you access to NEST's
