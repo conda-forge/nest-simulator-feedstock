@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.10_rc1" %}
-{% set build = 1 %}
+{% set version = "3.10_rc2" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 93a217ea59b16a8be33776e0f6acb941919500d1d42a91efd8f1669d05f4533c
+  sha256: acd3898b0880406d4278570dcdd4a2c923513f0ec010c22af927e2a46a16609d
 
 build:
   number: {{ build }}
@@ -31,7 +31,8 @@ requirements:
   host:
     - cython <3.1.0  
     - gsl >=1.11
-    - hdf5
+    - hdf5 >=1.10,<1.15  # [osx]
+    - hdf5 >=1.14       # [linux]
     - h5py
     - libboost-devel
     - libboost-headers
